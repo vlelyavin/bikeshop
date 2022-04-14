@@ -313,7 +313,7 @@
 }
 
 .show {
-  animation: 0.7s translate forwards;
+  animation: 0.5s translate forwards;
 }
 
 .titlereveal {
@@ -321,14 +321,14 @@
 }
 
 .reveal {
-  animation: reveal 1.3s forwards, translate 0.6s forwards;
+  animation: reveal 1s forwards, translate 0.5s forwards;
 }
 
 @keyframes reveal {
   0% {
     color: var(--white);
   }
-  40% {
+  30% {
     color: var(--white);
   }
   100% {
@@ -339,7 +339,7 @@
 
 @keyframes translate {
   from {
-    transform: translatey(100px);
+    transform: translatey(80px);
   }
   to {
     transform: translatey(0);

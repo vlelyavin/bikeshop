@@ -23,6 +23,31 @@ body {
   left: 0;
   top: 0;
   z-index: 5;
+  overflow: hidden;
+}
+
+.main__arrow {
+  position: relative;
+  top: 220px;
+  transition: top 1s;
+}
+
+.arrow {
+  top: 60px;
+  animation-delay: 2s;
+  animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .slider {

@@ -13,7 +13,8 @@ const container = document.querySelector(".main__intro__inner");
 const slider = document.querySelector(".slider");
 const sliderImages = document.querySelectorAll(".slider__image");
 const sliderNav = document.querySelector(".slider__nav");
-const buttons = document.querySelectorAll(".slider__nav__button");
+const sliderNavButtons = document.querySelectorAll(".slider__nav__button");
+const mainArrow = document.querySelector(".main__arrow");
 
 mainTitleFirst.classList.add("titlereveal");
 intro.style.height = `${window.innerHeight * 4.2}px`;
@@ -25,6 +26,10 @@ setTimeout(() => {
 setTimeout(() => {
   mainTitleThird.classList.add("titlereveal");
 }, 1400);
+
+setTimeout(() => {
+  mainArrow.classList.add("arrow");
+}, 2000);
 
 search.addEventListener("keyup", (e) => {
   const options = {
@@ -113,9 +118,9 @@ document.addEventListener("scroll", () => {
   }
 });
 
-buttons.forEach((button) =>
+sliderNavButtons.forEach((button) =>
   button.addEventListener("click", (e) => {
-    buttons.forEach((button) => (button.style.background = "transparent"));
+    sliderNavButtons.forEach((button) => (button.style.background = "transparent"));
     e.target.style.background = "#fff";
   })
 );
