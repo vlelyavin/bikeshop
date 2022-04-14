@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/general.css" />
+    <link rel="stylesheet" href="../style/contact.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/fonts.css" />
+    <title>Bikelab</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a class="logo__img" href="./main.html"></a>
+        <div class="logo__name">Bikeshop</div>
+      </div>
+      <nav class="header__nav">
+        <a href="./main.html#bikes" class="nav__link">
+          <span class="custombtn">Bikes</span>
+        </a>
+        <a href="./about.html" class="nav__link">
+          <span class="custombtn">About us</span>
+        </a>
+        <a href="./contact.html" class="nav__link">
+          <span class="custombtn">Contact</span>
+        </a>
+      </nav>
+
+      <aside class="header__aside">
+        <a href="./register.html" class="user__icon">
+          <img src="../images/icons/user.png" alt="user" />
+        </a>
+      </aside>
+
+      <img class="menu__img" src="../images/icons/menu.png" />
+    </header>
+
+    <div class="sidemenu">
+      <a href="./main.html#bikes" class="nav__link sidebar slowscroll">
+        <span class="custombtn">Bikes</span>
+      </a>
+      <a href="./about.html" class="nav__link sidebar">
+        <span class="custombtn">About us</span>
+      </a>
+      <a href="./contact.html" class="nav__link sidebar">
+        <span class="custombtn">Contact</span>
+      </a>
+    </div>
+
+    <form class="contact" id="form" action="response.php">
+      <div class="container">
+        <div class="form__inner">
+          <div class="form__title__container">
+            <p class="form__title">Contact us</p>
+          </div>
+          <div class="form__text__container">
+            <p class="form__text">
+              Do you have a question? We will be happy to facilitate. Only send
+              us a message,<br />
+              and we will respond as soon as possible
+            </p>
+          </div>
+          <div class="form__input__label__container">
+            <p class="form__input__label">Your name</p>
+          </div>
+          <div class="form__input__container">
+            <input
+              type="text"
+              class="form__input"
+              name="username"
+              id="username"
+              required
+              title="We need your name"
+            />
+          </div>
+          <div class="form__input__label__container">
+            <p class="form__input__label">Email address</p>
+          </div>
+          <div class="form__input__container">
+            <input
+              type="email"
+              class="form__input"
+              id="email"
+              name="email"
+              minlength="8"
+              required
+              title="Email is required"
+            />
+          </div>
+          <div class="form__input__label__container">
+            <p class="form__input__label">Message</p>
+          </div>
+          <div class="form__input__container">
+            <textarea
+              class="contact__textarea"
+              name="textarea"
+              id="textarea"
+              minlength="10"
+              cols="47"
+              rows="5"
+              required
+              title="This field is required"
+            ></textarea>
+          </div>
+          <div class="form__button__container">
+            <button class="nav__link submit" type="submit">
+              <span class="custombtn">Send</span>
+            </button>
+          </div>
+          <p class="form__submit__status">
+            Registered successfully, redirecting to the main page...
+          </p>
+        </div>
+      </div>
+    </form>
+    <script src="../script/header.js" defer></script>
+    <script src="../script/contact.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+body {
+  background: url(../images/bg/forest.jpg) no-repeat center center / cover;
+  background-attachment: fixed;
+}
+
+.map__container {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+iframe {
+  height: 340px;
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 100px 50px 40px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.about__location__container {
+  margin: 0 0 28px 0;
+  overflow: hidden;
+}
+
+.about__location {
+  opacity: 0;
+  font-size: 47px;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 100px 30px 30px;
+  }
+}

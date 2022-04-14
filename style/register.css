@@ -1,0 +1,106 @@
+body {
+  background: url(../images/bg/register.jpg) no-repeat center center / cover;
+  background-attachment: fixed;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.register__header {
+  margin: 40px 0;
+  font-size: 50px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.reg__text {
+  text-transform: capitalize;
+  margin: 14px 0;
+  font-size: 23px;
+  text-align: left;
+  opacity: 0;
+}
+
+.password__line {
+  position: relative;
+}
+
+.fb__placement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 30px;
+  overflow: hidden;
+}
+
+.fb-login-button {
+  text-align: center;
+  opacity: 0;
+}
+
+.check__password__line {
+  position: relative;
+  overflow: hidden;
+}
+
+.eye {
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  transform: scale(0.8);
+}
+
+.eyeouter:hover {
+  box-shadow: 0 0 0 1px var(--black);
+}
+
+.eyeouter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 9px;
+  opacity: 0;
+  right: 10px;
+  border: var(--border-black);
+}
+
+.eyeouter::before {
+  position: absolute;
+  content: "";
+  width: var(--btn4);
+  height: var(--btn12);
+  top: 6px;
+  left: -2px;
+  transition: var(--btn-transition);
+  background: var(--white);
+}
+
+.eyeouter::after {
+  position: absolute;
+  content: "";
+  height: var(--btn4);
+  width: var(--btn12);
+  left: 6px;
+  top: -2px;
+  transition: var(--btn-transition);
+  background: var(--white);
+}
+
+.eyeouter:hover::before {
+  transform: scaley(0);
+}
+
+.eyeouter:hover::after {
+  transform: scalex(0);
+}
+
+.check__password {
+  display: none;
+}

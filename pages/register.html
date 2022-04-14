@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/register.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/fonts.css" />
+    <link rel="stylesheet" href="../style/general.css" />
+    <title>Bikelab</title>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+
+    <header class="header">
+      <div class="header__logo">
+        <a class="logo__img" href="./main.html"></a>
+        <div class="logo__name">Bikeshop</div>
+      </div>
+      <nav class="header__nav">
+        <a href="./main.html#bikes" class="nav__link"
+          ><span class="custombtn">Bikes</span>
+        </a>
+        <a href="./about.html" class="nav__link"
+          ><span class="custombtn">About us</span></a
+        >
+        <a href="./contact.html" class="nav__link"
+          ><span class="custombtn">Contact</span></a
+        >
+      </nav>
+
+      <aside class="header__aside">
+        <a href="./register.html" class="user__icon">
+          <img src="../images/icons/user.png" alt="user" />
+        </a>
+      </aside>
+
+      <img class="menu__img" src="../images/icons/menu.png" />
+    </header>
+
+    <div class="sidemenu">
+      <a href="./main.html#bikes" class="nav__link sidebar slowscroll">
+        <span class="custombtn">Bikes</span>
+      </a>
+      <a href="./about.html" class="nav__link sidebar">
+        <span class="custombtn">About us</span>
+      </a>
+      <a href="./contact.html" class="nav__link sidebar">
+        <span class="custombtn">Contact</span>
+      </a>
+    </div>
+
+    <form class="register__form" id="form" method="post">
+      <div class="container">
+        <div class="form__title__container">
+          <p class="form__title">Register</p>
+        </div>
+        <div class="form__input__label__container">
+          <p class="form__input__label">Your name</p>
+        </div>
+        <div class="form__input__container">
+          <input
+            class="form__input"
+            type="text"
+            name="username"
+            id="name"
+            minlength="3"
+            required
+            title="We need to know your name"
+          />
+        </div>
+        <div class="form__input__label__container">
+          <p class="form__input__label">Email address</p>
+        </div>
+        <div class="form__input__container">
+          <input
+            class="form__input"
+            type="email"
+            name="email"
+            id="email"
+            minlength="8"
+            required
+            title="Email is required"
+          />
+        </div>
+        <div class="form__input__label__container">
+          <p class="form__input__label">Enter password</p>
+        </div>
+        <div class="form__input__container">
+          <input
+            class="form__input"
+            type="password"
+            name="password"
+            id="password"
+            minlength="5"
+            required
+            title="Passwords cannot be less than 5 symbols"
+          />
+          <div class="eyeouter">
+            <img class="eye" id="eye" src="../images/icons/view.png" />
+          </div>
+        </div>
+        <div class="form__input__label__container">
+          <p class="form__input__label">Repeat password</p>
+        </div>
+        <div class="form__input__container">
+          <input
+            class="form__input"
+            type="password"
+            name="password__rep"
+            id="password__rep"
+            minlength="5"
+            required
+            title="Repeat password"
+          />
+          <div class="eyeouter">
+            <img class="eye" id="eye2" src="../images/icons/view.png" />
+          </div>
+        </div>
+        <p class="check__password">Passwords does not match</p>
+        <div class="form__button__container">
+          <button type="submit" id="submit" class="nav__link submit">
+            <span class="custombtn">Register</span>
+          </button>
+        </div>
+        <p class="form__submit__status">
+          Registered successfully, redirecting to the main page...
+        </p>
+        <div class="fb__placement">
+          <fb:login-button
+            class="fb-login-button"
+            data-width="280"
+            data-size="large"
+            data-onlogin="loginStatus()"
+            data-button-type="login_with"
+            data-layout="rounded"
+            data-auto-logout-link="true"
+            data-use-continue-as="false"
+            scope="public_profile,email"
+            onlogin="checkLoginState();"
+          >
+          </fb:login-button>
+        </div>
+      </div>
+    </form>
+    <script src="../script/header.js" defer></script>
+    <script src="../script/register.js" defer></script>
+    <script src="../script/facebook.js" defer></script>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v12.0&appId=725605504985921&autoLogAppEvents=1"
+      nonce="D7xSAERL"
+    ></script>
+  </body>
+</html>
