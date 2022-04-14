@@ -9,9 +9,14 @@ const searchLine = document.querySelector(".search__line");
 const slowScroll = document.querySelector(".slowscroll");
 const topbrands = document.querySelectorAll(".top__brands");
 const cards = document.querySelectorAll(".product__column");
+const container = document.querySelector(".main__intro__inner");
+const slider = document.querySelector(".slider");
+const sliderImages = document.querySelectorAll(".slider__image");
+const sliderNav = document.querySelector(".slider__nav");
+const buttons = document.querySelectorAll(".slider__nav__button");
 
 mainTitleFirst.classList.add("titlereveal");
-intro.style.height = `${window.innerHeight * 4.5}px`;
+intro.style.height = `${window.innerHeight * 4.2}px`;
 
 setTimeout(() => {
   mainTitleSecond.classList.add("titlereveal");
@@ -78,23 +83,39 @@ cards.forEach((card) => {
   observer.observe(card);
 });
 
-const container = document.querySelector(".main__intro__inner");
-const container2 = document.querySelector(".main__intro__slider");
-const image = document.querySelector(".main__intro__slider__item");
-
 document.addEventListener("scroll", () => {
-  const wScrollY = window.pageYOffset;
+  const windowScrollY = window.pageYOffset;
 
-  container.style.transform = `translatey(-${wScrollY / 2}px)`;
+  container.style.transform = `translatey(-${windowScrollY / 2}px)`;
 
-  if (wScrollY <= 1500) {
-    const size = 175 - window.pageYOffset / 20;
-    image.style.transform = `scale(${75 + window.scrollY / 50}%)`;
-    image.style.width = `${size}%`;
-    image.style.height = `${size}%`;
+  if (windowScrollY <= 1500) {
+    const size = 175 - windowScrollY / 20;
+    sliderImages.forEach((image) => {
+      image.style.width = `${size}%`;
+      image.style.height = `${size}%`;
+    });
   }
 
-  if (wScrollY > 1500) {
-    container2.style.transform = `translatey(-${(wScrollY - 2000) / 1.5}px)`;
+  sliderNav.style.bottom = `${windowScrollY / 10 - 100}px`;
+  if (sliderNav.style.bottom.slice(0, -2) > 50) {
+    sliderNav.style.bottom = `50px`;
+  }
+
+  if ((windowScrollY - 1500) / 1.5 <= 100) {
+    slider.style.transition = `0.1s`;
+    slider.style.transform = `translatey(0)`;
+  } else {
+    slider.style.transition = ``;
+  }
+
+  if (windowScrollY > 1500) {
+    slider.style.transform = `translatey(-${(windowScrollY - 2000) / 1.5}px)`;
   }
 });
+
+buttons.forEach((button) =>
+  button.addEventListener("click", (e) => {
+    buttons.forEach((button) => (button.style.background = "transparent"));
+    e.target.style.background = "#fff";
+  })
+);

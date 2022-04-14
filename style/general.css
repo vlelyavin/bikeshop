@@ -102,11 +102,11 @@ body {
 }
 
 .valid {
-  border-bottom: 1px solid green;
+  border-bottom: 2px solid green;
 }
 
 .invalid {
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid red;
 }
 
 select {

@@ -53,7 +53,7 @@
     </header>
 
     <div class="sidemenu">
-      <a href="#bikes" class="nav__link sidebar slowscroll">
+      <a href="./main.html" class="nav__link sidebar slowscroll">
         <span class="custombtn">Bikes</span>
       </a>
       <a href="./about.html" class="nav__link sidebar">
@@ -78,52 +78,34 @@
           </div>
         </div>
       </div>
-      <div class="main__intro__slider">
-        <img class="main__intro__slider__item" src="../images/slider/canyon.jpg" />
-
-        <!-- <div class="slider__container" >
-          <div class="slider">
-            <div class="slides">
-              <div class="slide__elem">   
-                <img class="slide__img" src="../images/slider/canyon.jpg" />
-              </div>
-              <div class="slide__elem"> 
-                <img class="slide__img" src="../images/slider/santa.jpg" />
-              </div>
-              <div class="slide__elem">  
-                 <img class="slide__img" src="../images/slider/trek.webp" />
-              </div>
-              <div class="slide__elem"> 
-                <img class="slide__img" src="../images/slider/yeti.png" />
-             </div>
-            </div>
-            <div class="slider__nav">
-              <span class="slider__nav__btn" onclick="toSlide(1)"></span>
-              <span class="slider__nav__btn" onclick="toSlide(2)"></span>
-              <span class="slider__nav__btn" onclick="toSlide(3)"></span>
-              <span class="slider__nav__btn" onclick="toSlide(4)"></span>
-            </div>
-            <div class="sliders sliderprev" onclick="slideNav(-1)"></div>
-            <div class="sliders slidernext" onclick="slideNav(1)"></div>
+      <div class="slider">
+        <div class="slider__container">
+          <input type="radio" name="radio" id="button1" />
+          <input type="radio" name="radio" id="button2" />
+          <input type="radio" name="radio" id="button3" />
+          <input type="radio" name="radio" id="button4" />
+          <div class="slider__item first">
+            <img src="../images/slider/canyon.jpg" class="slider__image" />
           </div>
-        </div>  -->
+          <div class="slider__item">
+            <img src="../images/slider/santa.jpg" class="slider__image" />
+          </div>
+          <div class="slider__item">
+            <img src="../images/slider/trek.webp" class="slider__image" />
+          </div>
+          <div class="slider__item">
+            <img src="../images/slider/yeti.png" class="slider__image" />
+          </div>
+        </div>
+
+        <div class="slider__nav">
+          <label for="button1" class="slider__nav__button"></label>
+          <label for="button2" class="slider__nav__button"></label>
+          <label for="button3" class="slider__nav__button"></label>
+          <label for="button4" class="slider__nav__button"></label>
+        </div>
       </div>
     </div>
-    <!--     
-      <div class="main__container">
-      <img src="../images/bg/background.jpg" class="main__banner">
-         <div class="main__info">
-           <div class="main__title__container">
-            <p class="main__title__first">Лучшие велосипеды</p>
-           </div>
-           <div class="main__title__container">
-            <p class="main__title__second">только у нас</p>
-           </div>
-           <div class="main__title__container">
-            <p class="main__title__third">широкий выбор премиальных байков</p>
-           </div>
-          </div>
-      </div> -->
 
     <main class="main">
       <section class="product__list">
@@ -359,7 +341,7 @@
               <img class="product__image" src="../images/bikes/canyon mullet cf 8 CLLCTV.png" />
             </div>
             <a class="nav__link product">
-              <span class="custombtn">Canyon mullet CF 8 CLLCTV</span>
+              <span class="custombtn">Canyon mullet CF 8</span>
             </a>
             <p class="product__price">5600$</p>
           </div>

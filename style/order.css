@@ -61,6 +61,10 @@ body {
   flex-wrap: wrap;
 }
 
+.order__row:nth-child(2) {
+  margin: 20px 0 0 0;
+}
+
 .order__column {
   width: 50%;
   padding: 0 16px;
@@ -205,11 +209,11 @@ body {
 }
 
 .valid {
-  border-bottom: 1px solid green;
+  border-bottom: 2px solid green;
 }
 
 .invalid {
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid red;
 }
 
 @media (max-width: 1245px) {

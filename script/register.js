@@ -88,13 +88,7 @@ inputs.forEach((input) =>
       const fLen = firstPart.length;
       const sLen = secondPart.length;
       const tLen = thirdPart.length;
-      if (
-        fLen >= 2 &&
-        sLen >= 2 &&
-        tLen >= 2 &&
-        !/\d/.test(secondPart) &&
-        !/\d/.test(thirdPart)
-      ) {
+      if (fLen >= 2 && sLen >= 2 && tLen >= 2 && !/\d/.test(secondPart) && !/\d/.test(thirdPart)) {
         target.classList.add("valid");
         target.classList.remove("invalid");
       } else {
