@@ -25,7 +25,7 @@ form.addEventListener("submit", (e) => {
     console.log(localStorage);
     submitMsg.style.display = "flex";
     setTimeout(() => {
-      window.location = "./index.html";
+      window.location = "../index.html";
     }, 2000);
   } else alert("Проверьте свои данные");
 });
@@ -47,13 +47,7 @@ inputs.forEach((input) =>
       const fLen = firstPart.length;
       const sLen = secondPart.length;
       const tLen = thirdPart.length;
-      if (
-        fLen >= 2 &&
-        sLen >= 2 &&
-        tLen >= 2 &&
-        !/\d/.test(secondPart) &&
-        !/\d/.test(thirdPart)
-      ) {
+      if (fLen >= 2 && sLen >= 2 && tLen >= 2 && !/\d/.test(secondPart) && !/\d/.test(thirdPart)) {
         target.classList.add("valid");
         target.classList.remove("invalid");
       } else {

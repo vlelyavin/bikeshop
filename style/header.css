@@ -13,6 +13,7 @@
   --white: #fff;
   --lightgray: #f7f7f7;
   --black: #000;
+  --title-font-size: 120;
   --border-black: 1px solid var(--black);
   --btn4: calc(100% + 4px);
   --btn12: calc(100% - 12px);
