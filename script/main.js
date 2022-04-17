@@ -17,7 +17,7 @@ const sliderNavButtons = document.querySelectorAll(".slider__nav__button");
 const mainArrow = document.querySelector(".main__arrow");
 
 mainTitleFirst.classList.add("titlereveal");
-intro.style.height = `${window.innerHeight * 4.5}px`;
+intro.style.height = `${window.innerHeight * 4.8}px`;
 
 setTimeout(() => {
   mainTitleSecond.classList.add("titlereveal");
