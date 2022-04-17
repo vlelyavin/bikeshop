@@ -17,7 +17,7 @@ const sliderNavButtons = document.querySelectorAll(".slider__nav__button");
 const mainArrow = document.querySelector(".main__arrow");
 
 mainTitleFirst.classList.add("titlereveal");
-intro.style.height = `${window.innerHeight * 4.2}px`;
+intro.style.height = `${window.innerHeight * 4.5}px`;
 
 setTimeout(() => {
   mainTitleSecond.classList.add("titlereveal");
@@ -114,7 +114,7 @@ document.addEventListener("scroll", () => {
   }
 
   if (windowScrollY > 1500) {
-    slider.style.transform = `translatey(-${(windowScrollY - 2000) / 1.5}px)`;
+    slider.style.transform = `translatey(-${(windowScrollY - 2000) / 2}px)`;
   }
 });
 
