@@ -29,7 +29,7 @@ body {
 .main__arrow {
   --arrow-size: 90;
   position: relative;
-  top: 220px;
+  top: 100vh;
   transition: top 1s;
   width: calc(var(--arrow-size) * 1px);
   height: calc(var(--arrow-size) * 1px);
@@ -359,5 +359,8 @@ input[type="radio"] {
   .main__arrow {
     width: calc((var(--arrow-size) - 40) * 1px);
     height: calc((var(--arrow-size) - 40) * 1px);
+  }
+  .product__column {
+    padding: 30px 30px 10px;
   }
 }
