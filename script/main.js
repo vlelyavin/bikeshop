@@ -17,7 +17,14 @@ const sliderNavButtons = document.querySelectorAll(".slider__nav__button");
 const mainArrow = document.querySelector(".main__arrow");
 
 mainTitleFirst.classList.add("titlereveal");
-intro.style.height = `${window.innerHeight * 5}px`;
+
+if (window.innerHeight > 1440) {
+  intro.style.height = `${window.innerHeight * 3.5}px`;
+} else if (window.innerHeight <= 1440 && window.innerHeight > 1000) {
+  intro.style.height = `${window.innerHeight * 3.7}px`;
+} else {
+  intro.style.height = `${window.innerHeight * 4.8}px`;
+}
 
 setTimeout(() => {
   mainTitleSecond.classList.add("titlereveal");
