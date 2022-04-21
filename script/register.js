@@ -19,7 +19,6 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("email", formData.get("email"));
     localStorage.setItem("password", formData.get("password"));
     localStorage.setItem("password__rep", formData.get("password__rep"));
-    console.log(localStorage);
     submitMsg.style.display = "flex";
 
     setTimeout(() => {

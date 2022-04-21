@@ -86,12 +86,7 @@ const populateDays = (month) => {
     month === "Декабрь"
   ) {
     dayNum = 31;
-  } else if (
-    month === "Апрель" ||
-    month === "Июнь" ||
-    month === "Сентябрь" ||
-    month === "Ноябрь"
-  ) {
+  } else if (month === "Апрель" || month === "Июнь" || month === "Сентябрь" || month === "Ноябрь") {
     dayNum = 30;
   } else {
     if (new Date(year, 1, 29).getMonth() === 1) {
@@ -175,7 +170,6 @@ setTimeout(() => {
 inputFieds.forEach((field) =>
   field.addEventListener("input", (e) => {
     const target = e.target;
-    console.log(target.name);
     if (
       target.name === "email" &&
       target.value.includes("@") &&
@@ -189,13 +183,7 @@ inputFieds.forEach((field) =>
       const fLen = firstPart.length;
       const sLen = secondPart.length;
       const tLen = thirdPart.length;
-      if (
-        fLen >= 2 &&
-        sLen >= 2 &&
-        tLen >= 2 &&
-        !/\d/.test(secondPart) &&
-        !/\d/.test(thirdPart)
-      ) {
+      if (fLen >= 2 && sLen >= 2 && tLen >= 2 && !/\d/.test(secondPart) && !/\d/.test(thirdPart)) {
         target.classList.add("valid");
         target.classList.remove("invalid");
       } else {

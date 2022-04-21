@@ -22,7 +22,6 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("username", formData.get("username"));
     localStorage.setItem("email", formData.get("email"));
     localStorage.setItem("message", formData.get("textarea"));
-    console.log(localStorage);
     submitMsg.style.display = "flex";
     setTimeout(() => {
       window.location = "../index.html";
