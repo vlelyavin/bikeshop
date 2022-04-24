@@ -22,7 +22,7 @@ form.addEventListener("submit", (e) => {
     submitMsg.style.display = "flex";
 
     setTimeout(() => {
-      window.location = "./index.html";
+      window.location = "../index.html";
     }, 2000);
   } else alert("Проверьте свои данные");
 });
