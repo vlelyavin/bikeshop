@@ -9,10 +9,21 @@ body {
   max-width: 700px;
   width: 100%;
   margin: 0 auto;
-  padding: 100px 60px 0;
+  padding: 100px 30px 0;
   opacity: 0;
   transition: opacity 2s ease;
-  background: rgba(255, 255, 255, 0.7);
+}
+
+.main__title {
+  --title-fz: 120;
+  position: relative;
+  top: 5vh;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--title-fz) * 1px);
+  color: var(--white);
 }
 
 .form__inner {
@@ -27,7 +38,8 @@ body {
 }
 
 .form__title {
-  font-size: 60px;
+  --form-title-fz: 60;
+  font-size: calc(var(--form-title-fz) * 1px);
   letter-spacing: 1.5px;
   text-align: center;
 }
@@ -38,15 +50,18 @@ body {
 }
 
 .form__text {
-  font-size: 25px;
+  --form-text-fz: 22;
+  font-size: calc(var(--form-text-fz) * 1px);
   line-height: 40px;
   opacity: 0;
   text-align: center;
 }
 
 .form__input__container {
+  position: relative;
   overflow: hidden;
   width: 100%;
+  box-shadow: var(--form-bs);
 }
 
 .form__input {
@@ -54,7 +69,7 @@ body {
   height: 50px;
   opacity: 0;
   padding: 0 10px;
-  font-size: 22px;
+  font-size: var(--font-size);
 }
 
 .form__input__label__container {
@@ -67,14 +82,15 @@ body {
 .form__input__label {
   opacity: 0;
   text-transform: capitalize;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .form__button__container {
-  margin: 40px 0 30px;
+  margin: 30px 0;
   text-align: center;
   width: 100%;
   overflow: hidden;
+  box-shadow: var(--form-bs);
 }
 
 .submit {
@@ -136,28 +152,28 @@ textarea:focus {
 
 @media (max-width: 1200px) {
   .form__title {
-    font-size: 50px;
+    font-size: calc((var(--form-title-fz) - 5) * 1px);
     white-space: nowrap;
   }
   .form__text {
-    font-size: 22px;
+    font-size: calc((var(--form-text-fz) - 2) * 1px);
     line-height: 36px;
-  }
-  .form__input__label {
-    font-size: 20px;
   }
 }
 
 @media (max-width: 800px) {
+  .main__title {
+    font-size: calc((var(--title-fz) - 20) * 1px);
+  }
   .form__title {
-    font-size: 42px;
+    font-size: calc((var(--form-title-fz) - 10) * 1px);
     white-space: nowrap;
   }
   .form__text {
-    font-size: 18px;
+    font-size: calc((var(--form-text-fz) - 4) * 1px);
     line-height: 32px;
   }
   .form__input__label {
-    font-size: 18px;
+    font-size: var(--font-size);
   }
 }

@@ -16,8 +16,15 @@ const sliderNav = document.querySelector(".slider__nav");
 const sliderNavButtons = document.querySelectorAll(".slider__nav__button");
 const mainArrow = document.querySelector(".main__arrow");
 
+if (window.innerHeight > 1440) {
+  intro.style.height = `${window.innerHeight * 3.5}px`;
+} else if (window.innerHeight <= 1440 && window.innerHeight > 1000) {
+  intro.style.height = `${window.innerHeight * 3.7}px`;
+} else {
+  intro.style.height = `${window.innerHeight * 4.8}px`;
+}
+
 mainTitleFirst.classList.add("titlereveal");
-intro.style.height = `${window.innerHeight * 4.2}px`;
 
 setTimeout(() => {
   mainTitleSecond.classList.add("titlereveal");
@@ -114,7 +121,7 @@ document.addEventListener("scroll", () => {
   }
 
   if (windowScrollY > 1500) {
-    slider.style.transform = `translatey(-${(windowScrollY - 2000) / 1.5}px)`;
+    slider.style.transform = `translatey(-${(windowScrollY - 2000) / 2}px)`;
   }
 });
 

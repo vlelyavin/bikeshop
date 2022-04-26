@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/general.css" />
     <link rel="stylesheet" href="../style/register.css" />
     <link rel="stylesheet" href="../style/header.css" />
     <link rel="stylesheet" href="../style/fonts.css" />
-    <link rel="stylesheet" href="../style/general.css" />
+    <link rel="stylesheet" href="../style/footer.css" />
     <title>Bikelab</title>
   </head>
   <body>
@@ -19,8 +20,8 @@
       </div>
       <nav class="header__nav">
         <a href="../index.html" class="nav__link"><span class="custombtn">Bikes</span> </a>
-        <a href="./pages/about.html" class="nav__link"><span class="custombtn">About us</span></a>
-        <a href="./pages/contact.html" class="nav__link"><span class="custombtn">Contact</span></a>
+        <a href="../pages/about.html" class="nav__link"><span class="custombtn">About us</span></a>
+        <a href="../pages/contact.html" class="nav__link"><span class="custombtn">Contact</span></a>
       </nav>
 
       <aside class="header__aside">
@@ -36,15 +37,17 @@
       <a href="../index.html#trekbikes" class="nav__link sidebar slowscroll">
         <span class="custombtn">Bikes</span>
       </a>
-      <a href="./pages/about.html" class="nav__link sidebar">
+      <a href="../pages/about.html" class="nav__link sidebar">
         <span class="custombtn">About us</span>
       </a>
-      <a href="./pages/contact.html" class="nav__link sidebar">
+      <a href="../pages/contact.html" class="nav__link sidebar">
         <span class="custombtn">Contact</span>
       </a>
     </div>
 
-    <form class="register__form" id="form" method="post">
+    <div class="main__title">Account</div>
+
+    <form class="register__form" id="form">
       <div class="container">
         <div class="form__title__container">
           <p class="form__title">Register</p>
@@ -135,8 +138,15 @@
         </div>
       </div>
     </form>
+
+    <footer class="footer">
+      <p class="footer__text">© 2022 All rights reserved</p>
+      <p class="footer__text">Bikeshop</p>
+    </footer>
+
     <script src="../script/header.js"></script>
     <script src="../script/register.js"></script>
+    <script src="../script/titleAnim.js"></script>
     <script src="../script/facebook.js"></script>
     <script
       async

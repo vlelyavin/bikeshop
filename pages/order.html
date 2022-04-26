@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../style/order.css" />
     <link rel="stylesheet" href="../style/header.css" />
     <link rel="stylesheet" href="../style/fonts.css" />
+    <link rel="stylesheet" href="../style/footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Bikelab</title>
   </head>
@@ -37,6 +38,8 @@
       <a href="./contact.html" class="nav__link sidebar"><span class="custombtn">Contact</span></a>
     </div>
 
+    <div class="main__title">Order</div>
+
     <form class="order__form" id="form">
       <div class="container">
         <div class="order__row">
@@ -45,26 +48,26 @@
             <div class="input__suptitle__container">
               <label class="input__suptitle">Full name</label>
             </div>
-            <div class="order__input__container">
-              <input class="order__input" type="text" id="name" name="nam" minlength="4" required />
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="name" name="nam" minlength="4" required />
             </div>
             <div class="input__suptitle__container">
               <label class="input__suptitle">Email</label>
             </div>
-            <div class="order__input__container">
-              <input class="order__input" type="text" id="email" name="email" minlength="11" required />
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="email" name="email" minlength="11" required />
             </div>
             <div class="input__suptitle__container">
               <label class="input__suptitle">Address</label>
             </div>
-            <div class="order__input__container">
-              <input class="order__input" type="text" id="address" name="address" minlength="6" required />
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="address" name="address" minlength="6" required />
             </div>
             <div class="input__suptitle__container">
               <label class="input__suptitle">City</label>
             </div>
-            <div class="order__input__container">
-              <input class="order__input" type="text" id="city" name="city" minlength="2" required />
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="city" name="city" minlength="2" required />
             </div>
             <div class="errortext"></div>
             <div class="order__row__split">
@@ -72,8 +75,8 @@
                 <div class="input__suptitle__container">
                   <label class="input__suptitle">Phone number</label>
                 </div>
-                <div class="order__input__container">
-                  <input class="order__input" type="tel" id="phone" name="phone" maxlength="10" required />
+                <div class="form__input__container">
+                  <input class="form__input" type="tel" id="phone" name="phone" maxlength="10" required />
                 </div>
                 <div class="errortext"></div>
               </div>
@@ -81,8 +84,8 @@
                 <div class="input__suptitle__container">
                   <label class="input__suptitle">Postal code</label>
                 </div>
-                <div class="order__input__container">
-                  <input class="order__input" type="text" id="zip" name="zip" maxlength="5" required />
+                <div class="form__input__container">
+                  <input class="form__input" type="text" id="zip" name="zip" maxlength="5" required />
                 </div>
                 <div class="errortext"></div>
               </div>
@@ -92,8 +95,8 @@
                 <div class="input__suptitle__container">
                   <label class="input__suptitle">State</label>
                 </div>
-                <div class="order__input__container">
-                  <input class="order__input input" type="text" id="state" name="state" />
+                <div class="form__input__container">
+                  <input class="form__input input" type="text" id="state" name="state" />
                 </div>
                 <div class="errortext"></div>
               </div>
@@ -103,7 +106,7 @@
                   <label class="input__suptitle">Region</label>
                 </div>
                 <div class="regions__line">
-                  <div class="order__input__container">
+                  <div class="form__input__container">
                     <select name="regions" class="regions" id="select" required>
                       <option selected>Kiev city</option>
                       <option>Kiev region</option>
@@ -134,36 +137,36 @@
             <div class="input__suptitle__container">
               <label class="input__suptitle">Card name</label>
             </div>
-            <div class="order__input__container">
-              <input class="order__input input" type="text" id="cname" name="cardname" minlength="5" required />
+            <div class="form__input__container">
+              <input class="form__input input" type="text" id="cname" name="cardname" minlength="5" required />
             </div>
             <div class="input__suptitle__container">
               <label class="input__suptitle">Card number</label>
             </div>
-            <div class="order__input__container">
-              <input class="order__input input" type="text" id="ccnum" name="cardnumber" maxlength="19" required />
+            <div class="form__input__container">
+              <input class="form__input input" type="text" id="ccnum" name="cardnumber" maxlength="19" required />
             </div>
             <div class="input__suptitle__container">
               <label class="input__suptitle">Expiry month</label>
             </div>
-            <div class="order__input__container">
-              <input class="order__input" type="text" id="expmonth" name="expmonth" minlength="4" required />
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="expmonth" name="expmonth" minlength="4" required />
             </div>
             <div class="order__row__split">
               <div class="order__column__split">
                 <div class="input__suptitle__container">
                   <label class="input__suptitle">Expiry year</label>
                 </div>
-                <div class="order__input__container">
-                  <input class="order__input" type="text" id="expyear" name="expyear" maxlength="4" required />
+                <div class="form__input__container">
+                  <input class="form__input" type="text" id="expyear" name="expyear" maxlength="4" required />
                 </div>
               </div>
               <div class="order__column__split">
                 <div class="input__suptitle__container">
                   <label class="input__suptitle">CVV</label>
                 </div>
-                <div class="order__input__container">
-                  <input class="order__input" type="text" id="cvv" name="cvv" maxlength="3" required />
+                <div class="form__input__container">
+                  <input class="form__input" type="text" id="cvv" name="cvv" maxlength="3" required />
                 </div>
               </div>
             </div>
@@ -178,7 +181,7 @@
             <p class="order__header">Order message</p>
             <div class="bike__choice">
               <p class="bike__choice__header">Leave your message, choose the model of the bike and delivery date</p>
-              <div class="order__input__container">
+              <div class="form__input__container">
                 <select class="select__bike" id="bike__select">
                   <option>Trek slash 9.9 AXS</option>
                   <option>Trek slash 8</option>
@@ -239,9 +242,11 @@
                   </div>
                 </span>
               </div>
-              <a href="../pages/register.html" class="nav__link account"
-                ><span class="custombtn">Create account</span>
-              </a>
+              <div class="order__button__container">
+                <a href="../pages/register.html" class="nav__link submit"
+                  ><span class="custombtn">Create account</span>
+                </a>
+              </div>
             </div>
           </div>
           <div class="order__column">
@@ -249,49 +254,42 @@
             <div class="input__suptitle__container">
               <label class="input__suptitle">Full name</label>
             </div>
-            <div class="order__input__container">
-              <input class="order__input" type="text" id="named" name="name" required />
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="named" name="name" required />
             </div>
             <div class="input__suptitle__container">
               <label class="input__suptitle">Email</label>
             </div>
-            <div class="order__input__container">
-              <input class="order__input" type="email" id="emaild" name="email" required />
+            <div class="form__input__container">
+              <input class="form__input" type="email" id="emaild" name="email" required />
             </div>
             <div class="input__suptitle__container">
               <label class="input__suptitle">Address</label>
             </div>
-            <div class="order__input__container">
-              <input
-                class="order__input"
-                type="text"
-                id="addressd"
-                name="address"
-                required
-                title="Введите свой адрес"
-              />
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="addressd" name="address" required title="Введите свой адрес" />
             </div>
             <div class="input__suptitle__container">
               <label class="input__suptitle">City</label>
             </div>
-            <div class="order__input__container">
-              <input class="order__input inputanim" type="text" id="cityd" name="city" required />
+            <div class="form__input__container">
+              <input class="form__input inputanim" type="text" id="cityd" name="city" required />
             </div>
             <div class="order__row__split">
               <div class="order__column__split">
                 <div class="input__suptitle__container">
                   <label class="input__suptitle">Phone number</label>
                 </div>
-                <div class="order__input__container">
-                  <input class="order__input" type="tel" id="phoned" name="phone" required />
+                <div class="form__input__container">
+                  <input class="form__input" type="tel" id="phoned" name="phone" required />
                 </div>
               </div>
               <div class="order__column__split">
                 <div class="input__suptitle__container">
                   <label class="input__suptitle">Postal code</label>
                 </div>
-                <div class="order__input__container">
-                  <input class="order__input" type="text" id="zipd" name="zip" required />
+                <div class="form__input__container">
+                  <input class="form__input" type="text" id="zipd" name="zip" required />
                 </div>
               </div>
             </div>
@@ -300,8 +298,8 @@
                 <div class="input__suptitle__container">
                   <label class="input__suptitle">State</label>
                 </div>
-                <div class="order__input__container">
-                  <input class="order__input" type="text" id="stated" name="state" />
+                <div class="form__input__container">
+                  <input class="form__input" type="text" id="stated" name="state" />
                 </div>
               </div>
               <div class="order__column__split">
@@ -309,7 +307,7 @@
                   <label class="input__suptitle">Region</label>
                 </div>
                 <div class="regions__line">
-                  <div class="order__input__container">
+                  <div class="form__input__container">
                     <select name="regions" class="regions" id="selectd" required>
                       <option selected>Kiev city</option>
                       <option>Kiev region</option>
@@ -335,7 +333,14 @@
         </div>
       </div>
     </form>
+
+    <footer class="footer">
+      <p class="footer__text">© 2022 All rights reserved</p>
+      <p class="footer__text">Bikeshop</p>
+    </footer>
+
     <script src="../script/header.js"></script>
     <script src="../script/order.js"></script>
+    <script src="../script/titleAnim.js"></script>
   </body>
 </html>

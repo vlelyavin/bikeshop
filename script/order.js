@@ -16,9 +16,9 @@ const state = document.getElementById("state");
 const stated = document.getElementById("stated");
 const select = document.getElementById("select");
 const selectd = document.getElementById("selectd");
-const submitBtn = document.querySelector(".submit");
+const submitBtns = document.querySelectorAll(".submit");
 const createAcc = document.querySelector(".account");
-const textarea = document.getElementById("textarea");
+const textArea = document.querySelector("textarea");
 const daySelect = document.getElementById("deliveryday");
 const monthSelect = document.getElementById("deliverymonth");
 const yearSelect = document.getElementById("deliveryyear");
@@ -86,12 +86,7 @@ const populateDays = (month) => {
     month === "Декабрь"
   ) {
     dayNum = 31;
-  } else if (
-    month === "Апрель" ||
-    month === "Июнь" ||
-    month === "Сентябрь" ||
-    month === "Ноябрь"
-  ) {
+  } else if (month === "Апрель" || month === "Июнь" || month === "Сентябрь" || month === "Ноябрь") {
     dayNum = 30;
   } else {
     if (new Date(year, 1, 29).getMonth() === 1) {
@@ -163,19 +158,19 @@ setTimeout(() => {
 }, 300);
 
 setTimeout(() => {
-  submitBtn.classList.add("show");
+  submitBtns.forEach((button) => {
+    button.classList.add("show");
+  });
   iconContainer.classList.add("show");
   selectFields.forEach((field) => field.classList.add("show"));
   inputFieds.forEach((field) => field.classList.add("show"));
-  createAcc.classList.add("show");
-  textarea.classList.add("show");
   checkLabel.classList.add("show");
+  textArea.classList.add("show");
 }, 600);
 
 inputFieds.forEach((field) =>
   field.addEventListener("input", (e) => {
     const target = e.target;
-    console.log(target.name);
     if (
       target.name === "email" &&
       target.value.includes("@") &&
@@ -189,13 +184,7 @@ inputFieds.forEach((field) =>
       const fLen = firstPart.length;
       const sLen = secondPart.length;
       const tLen = thirdPart.length;
-      if (
-        fLen >= 2 &&
-        sLen >= 2 &&
-        tLen >= 2 &&
-        !/\d/.test(secondPart) &&
-        !/\d/.test(thirdPart)
-      ) {
+      if (fLen >= 2 && sLen >= 2 && tLen >= 2 && !/\d/.test(secondPart) && !/\d/.test(thirdPart)) {
         target.classList.add("valid");
         target.classList.remove("invalid");
       } else {

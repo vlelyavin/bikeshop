@@ -6,6 +6,8 @@ body {
 .order__form {
   display: flex;
   align-items: center;
+  width: 100%;
+  background: var(--lightgray);
 }
 
 .order__header {
@@ -40,7 +42,7 @@ body {
   width: 100%;
   height: 50px;
   font-size: 20px;
-  margin: 0 0 20px 0;
+
   padding: 12px;
 }
 
@@ -112,7 +114,7 @@ body {
 }
 
 .select__bike {
-  width: 70%;
+  width: 100%;
   height: 50px;
 }
 
@@ -138,6 +140,7 @@ body {
   background: var(--white);
   left: -30px;
   transition: box-shadow 0.3s;
+  box-shadow: var(--form-bs);
 }
 
 .checklabel::after {
@@ -171,23 +174,24 @@ body {
 }
 
 .textarea {
-  width: 70%;
+  width: 100%;
   height: 200px;
   font-size: 20px;
-  margin: 30px 0 0 0;
   padding: 10px;
 }
 
 .submit__block {
-  width: 100%;
-  text-align: center;
-  padding: 25px 0 40px;
+  width: 400px;
+  margin: 40px auto;
   overflow: hidden;
+  box-shadow: var(--form-bs);
 }
 
 .order__textarea__container {
   overflow: hidden;
   width: 100%;
+  box-shadow: var(--form-bs);
+  margin: 30px 0 0 0;
 }
 
 .submit {
@@ -208,6 +212,13 @@ body {
   opacity: 0;
 }
 
+.order__button__container {
+  padding: 0;
+  overflow: hidden;
+  line-height: 54px;
+  box-shadow: var(--form-bs);
+}
+
 .valid {
   border-bottom: 2px solid green;
 }
@@ -223,11 +234,6 @@ body {
   }
   .order__column {
     width: 100%;
-  }
-  .container {
-    margin: 0 auto;
-    width: 700px;
-    padding: 100px 60px 0;
   }
   .checklabel::before {
     top: -1px;

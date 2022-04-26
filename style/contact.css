@@ -1,6 +1,10 @@
 body {
-  background: url(../images/bg/dark.jpg) no-repeat center center / cover;
+  background: url(../images/bg/dark.jpg) no-repeat center -25vh / cover;
   background-attachment: fixed;
+}
+
+.contact {
+  background: var(--lightgray);
 }
 
 .contact__textarea {
