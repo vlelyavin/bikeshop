@@ -167,7 +167,7 @@ input[type="radio"] {
   background: var(--white);
   opacity: 0;
   transition: var(--btn-transition);
-  /* box-shadow: var(--gray-bs); */
+  box-shadow: var(--gray-bs);
   border-radius: 3px;
 }
 
