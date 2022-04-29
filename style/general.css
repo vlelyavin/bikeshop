@@ -15,7 +15,7 @@ body {
 }
 
 .main__title {
-  --title-fz: 120;
+  --title-fz: 100;
   position: relative;
   top: 5vh;
   height: 70vh;
@@ -23,6 +23,9 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(var(--title-fz) * 1px);
+  font-family: var(--medium);
+  text-transform: uppercase;
+  letter-spacing: 5px;
   color: var(--white);
 }
 
@@ -42,6 +45,7 @@ body {
   font-size: calc(var(--form-title-fz) * 1px);
   letter-spacing: 1.5px;
   text-align: center;
+  font-family: var(--medium);
 }
 
 .form__text__container {
@@ -61,7 +65,7 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
-  box-shadow: var(--form-bs);
+  box-shadow: var(--gray-bs);
 }
 
 .form__input {
@@ -90,15 +94,12 @@ body {
   text-align: center;
   width: 100%;
   overflow: hidden;
-  box-shadow: var(--form-bs);
+  box-shadow: var(--gray-bs);
 }
 
 .submit {
   background: var(--white);
-  font-family: var(--regular);
   opacity: 0;
-  cursor: pointer;
-  font-size: 23px;
   width: 100%;
 }
 

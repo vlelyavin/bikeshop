@@ -167,10 +167,12 @@ input[type="radio"] {
   background: var(--white);
   opacity: 0;
   transition: var(--btn-transition);
+  /* box-shadow: var(--gray-bs); */
+  border-radius: 3px;
 }
 
 .product__column:hover {
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--gray-bs), var(--box-shadow);
 }
 
 .product__image__box {
@@ -227,7 +229,8 @@ input[type="radio"] {
 }
 
 .help__header {
-  font-size: 60px;
+  --help-h-fz: 60;
+  font-size: calc(var(--help-h-fz) * 1px);
   padding: 0 0 40px 0;
   color: var(--white);
   font-family: var(--regular);
@@ -301,15 +304,12 @@ input[type="radio"] {
     height: calc((var(--arrow-size) - 20) * 1px);
   }
   .help__header {
-    font-size: 37px;
+    font-size: calc((var(--help-h-fz) - 20) * 1px);
+    white-space: normal;
   }
 }
 
 @media (max-width: 965px) {
-  .help__header {
-    font-size: 32px;
-    white-space: normal;
-  }
   .footer__text:last-child,
   .footer__text:nth-child(2) {
     display: none;

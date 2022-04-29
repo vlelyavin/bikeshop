@@ -140,7 +140,7 @@ body {
   background: var(--white);
   left: -30px;
   transition: box-shadow 0.3s;
-  box-shadow: var(--form-bs);
+  box-shadow: var(--gray-bs);
 }
 
 .checklabel::after {
@@ -184,13 +184,13 @@ body {
   width: 400px;
   margin: 40px auto;
   overflow: hidden;
-  box-shadow: var(--form-bs);
+  box-shadow: var(--gray-bs);
 }
 
 .order__textarea__container {
   overflow: hidden;
   width: 100%;
-  box-shadow: var(--form-bs);
+  box-shadow: var(--gray-bs);
   margin: 30px 0 0 0;
 }
 
@@ -216,7 +216,7 @@ body {
   padding: 0;
   overflow: hidden;
   line-height: 54px;
-  box-shadow: var(--form-bs);
+  box-shadow: var(--gray-bs);
 }
 
 .valid {

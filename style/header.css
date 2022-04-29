@@ -11,7 +11,7 @@
 
 :root {
   --white: #fff;
-  --lightgray: #f7f7f7;
+  --lightgray: #fdfdfd;
   --black: #000;
   --title-font-size: 120;
   --border-black: 1px solid var(--black);
@@ -22,7 +22,7 @@
   --textshadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
   --box-shadow: inset 0 0 0 1px var(--black);
   --font-size: 18px;
-  --form-bs: 0 0 10px 1px rgb(222, 222, 222);
+  --gray-bs: 0 0 10px 1px rgb(222, 222, 222);
 }
 
 .header {
@@ -34,6 +34,7 @@
   width: 100%;
   z-index: 3;
   background: var(--white);
+  box-shadow: var(--gray-bs);
 }
 
 .header__logo {
@@ -161,6 +162,7 @@
   transform: translatex(340px);
   transition: transform var(--transition), opacity var(--transition);
   background: var(--white);
+  box-shadow: var(--gray-bs);
 }
 
 .sidebar {
@@ -298,7 +300,7 @@
 .clear:before {
   position: absolute;
   content: "";
-  width: 1px;
+  width: 1.5px;
   right: 7px;
   height: 15px;
   z-index: 3;
@@ -309,7 +311,7 @@
 .clear:after {
   position: absolute;
   content: "";
-  width: 1px;
+  width: 1.5px;
   right: 7px;
   height: 15px;
   z-index: 3;

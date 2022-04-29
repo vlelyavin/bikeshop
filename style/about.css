@@ -6,6 +6,7 @@ body {
 .map__container {
   overflow: hidden;
   margin: 0 auto;
+  box-shadow: var(--gray-bs);
 }
 
 .about {
@@ -37,6 +38,7 @@ iframe {
 
 .about__location {
   opacity: 0;
-  font-size: 47px;
+  font-size: 52px;
   white-space: nowrap;
+  font-family: var(--medium);
 }

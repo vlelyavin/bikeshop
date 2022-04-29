@@ -4,6 +4,7 @@
   align-items: center;
   height: 80px;
   background: var(--white);
+  box-shadow: var(--gray-bs);
 }
 
 .footer__text {
