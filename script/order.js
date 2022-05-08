@@ -51,12 +51,7 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem("phone", formData.get("phone"));
   localStorage.setItem("zip", formData.get("zip"));
   localStorage.setItem("state", formData.get("state"));
-
-  console.log(localStorage);
-  alert("Your order has been sent! You will be redirected to the main page");
-  setTimeout(() => {
-    window.location.href = "../../index.html";
-  }, 500);
+  alert("Your order has been sent!");
 });
 
 const months = [
