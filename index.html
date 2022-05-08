@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/header.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/autocomplete.css" />
+    <link rel="stylesheet" href="./style/fonts.css" />
+    <link rel="stylesheet" href="./style/footer.css" />
+    <title>Bikeshop</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a class="logo__img" href="./index.html"></a>
+        <p class="logo__name">Bikeshop</p>
+      </div>
+
+      <nav class="header__nav">
+        <a href="#trekbikes" class="nav__link slowscroll">
+          <span class="custombtn">Bikes</span>
+        </a>
+        <a href="./pages/about.html" class="nav__link">
+          <span class="custombtn">About us</span>
+        </a>
+        <a href="./pages/contact.html" class="nav__link">
+          <span class="custombtn">Contact</span>
+        </a>
+      </nav>
+
+      <aside class="header__aside">
+        <div class="search__line">
+          <div class="search__icon"></div>
+          <div class="inputarea">
+            <input
+              id="autoComplete"
+              type="text"
+              dir="ltr"
+              spellcheck="false"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+            />
+          </div>
+          <div class="clear"></div>
+        </div>
+        <a href="./pages/register.html" class="user__icon">
+          <img class="user__icon__image" src="./images/icons/user.png" alt="user" />
+        </a>
+      </aside>
+
+      <img class="menu__img" src="./images/icons/menu.png" />
+    </header>
+
+    <div class="sidemenu">
+      <a href="./index.html" class="nav__link sidebar slowscroll">
+        <span class="custombtn">Bikes</span>
+      </a>
+      <a href="./pages/about.html" class="nav__link sidebar">
+        <span class="custombtn">About us</span>
+      </a>
+      <a href="./pages/contact.html" class="nav__link sidebar">
+        <span class="custombtn">Contact</span>
+      </a>
+    </div>
+
+    <div class="main__intro">
+      <div class="main__intro__inner">
+        <div class="main__info">
+          <div class="main__title__container">
+            <h1 class="main__title__first">Our company provides</h1>
+          </div>
+          <div class="main__title__container">
+            <h2 class="main__title__second">huge choice</h2>
+          </div>
+          <div class="main__title__container">
+            <h3 class="main__title__third">of premium bicycles</h3>
+          </div>
+        </div>
+        <img src="images/icons/arrow.png" class="main__arrow" />
+      </div>
+
+      <div class="slider">
+        <div class="slider__container">
+          <input type="radio" name="radio" id="button1" />
+          <input type="radio" name="radio" id="button2" />
+          <input type="radio" name="radio" id="button3" />
+          <input type="radio" name="radio" id="button4" />
+          <div class="slider__item first">
+            <img src="./images/slider/canyon.jpg" class="slider__image" />
+          </div>
+          <div class="slider__item">
+            <img src="./images/slider/santa.jpg" class="slider__image" />
+          </div>
+          <div class="slider__item">
+            <img src="./images/slider/trek.webp" class="slider__image" />
+          </div>
+          <div class="slider__item">
+            <img src="./images/slider/yeti.png" class="slider__image" />
+          </div>
+        </div>
+
+        <div class="slider__nav">
+          <label for="button1" class="slider__nav__button"></label>
+          <label for="button2" class="slider__nav__button"></label>
+          <label for="button3" class="slider__nav__button"></label>
+          <label for="button4" class="slider__nav__button"></label>
+        </div>
+      </div>
+    </div>
+
+    <main class="main">
+      <section class="product__list">
+        <div class="product__main__text">
+          <h4 id="trekbikes" class="top__brands">Trek bicycles</h4>
+        </div>
+        <div class="product__row">
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/slash9.9.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Trek slash 9.9 AXS</span>
+            </a>
+            <p class="product__price">12000$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/slash8.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product"><span class="custombtn">Trek slash 8</span></a>
+            <p class="product__price">4500$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/slash7.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product"><span class="custombtn">Trek slash 7</span></a>
+            <p class="product__price">3700$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/fuel9.8.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Trek top fuel 9.8 XT</span>
+            </a>
+            <p class="product__price">6700$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/fuel8.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Trek top fuel 8</span>
+            </a>
+            <p class="product__price">4300$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/roscoe9.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Trek roscoe 9</span>
+            </a>
+            <p class="product__price">3800$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/procaliber9.7.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Trek procaliber 9.7</span>
+            </a>
+            <p class="product__price">4100$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/marlin8.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Trek marlin 8</span>
+            </a>
+            <p class="product__price">1450$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/marlin6.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Trek marlin 6</span>
+            </a>
+            <p class="product__price">870$</p>
+          </div>
+        </div>
+        <div class="product__main__text">
+          <h4 class="top__brands" id="santacruz">Santa Cruz</h4>
+        </div>
+        <div class="product__row row__mod">
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/v10.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Santa cruz v10</span>
+            </a>
+            <p class="product__price">6850$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/bronson.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Santa cruz bronson</span>
+            </a>
+            <p class="product__price">5100$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/chameleon.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Santa cruz chameleon</span>
+            </a>
+            <p class="product__price">2500$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/hightower.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Santa cruz hightower</span>
+            </a>
+            <p class="product__price">3600$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/blur.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Santa cruz blur</span>
+            </a>
+            <p class="product__price">5300$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/nomad.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Santa cruz nomad</span>
+            </a>
+            <p class="product__price">5200$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/jackal.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Santa cruz jackal</span>
+            </a>
+            <p class="product__price">2000$</p>
+          </div>
+        </div>
+        <div class="product__main__text">
+          <h4 class="top__brands" id="yeticycles">Yeti cycles</h4>
+        </div>
+        <div class="product__row">
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/sb165.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Yeti sb 165</span>
+            </a>
+            <p class="product__price">9600$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/sb150.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Yeti sb 150</span>
+            </a>
+            <p class="product__price">8800$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/arc.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Yeti ARC</span>
+            </a>
+            <p class="product__price">4600$</p>
+          </div>
+        </div>
+        <div class="product__main__text">
+          <h4 class="top__brands" id="pivot">Pivot cycles</h4>
+        </div>
+        <div class="product__row">
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/phoenix 29.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Pivot phoenix 29</span>
+            </a>
+            <p class="product__price">10500$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/mach 6.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Pivot mach 6</span>
+            </a>
+            <p class="product__price">8500$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/trail 429.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Pivot firebird</span>
+            </a>
+            <p class="product__price">8100$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/pivot firebird.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Pivot trail 429</span>
+            </a>
+            <p class="product__price">7800$</p>
+          </div>
+        </div>
+        <div class="product__main__text">
+          <h4 class="top__brands" id="canyon">Canyon US</h4>
+        </div>
+        <div class="product__row">
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/canyon mullet cf 8 CLLCTV.png" />
+            </div>
+            <a class="nav__link product">
+              <span class="custombtn">Canyon mullet CF 8</span>
+            </a>
+            <p class="product__price">5600$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/canyon spectral 27.5 CF 7.png" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Canyon spectral 27.5 CF 7</span>
+            </a>
+            <p class="product__price">4100$</p>
+          </div>
+        </div>
+        <div class="product__main__text">
+          <h4 class="top__brands" id="cannondale">Cannondale</h4>
+        </div>
+        <div class="product__row">
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/scalpel.jpeg" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product"><span class="custombtn">Cannondale scalpel</span></a>
+            <p class="product__price">4600$</p>
+          </div>
+          <div class="product__column">
+            <div class="product__image__box">
+              <img class="product__image" src="./images/bikes/f-si.jpeg" />
+            </div>
+            <a href="./pages/order.html" class="nav__link product">
+              <span class="custombtn">Cannondale F-SI</span>
+            </a>
+            <p class="product__price">3400$</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="help">
+      <div class="help__inner">
+        <p class="help__header">Need help choosing the appropriate bike?</p>
+        <a href="./pages/contact.html" class="nav__link helplink">
+          <span class="custombtn">Contact us</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__text">© 2022 All rights reserved</p>
+      <p class="footer__text">Bikeshop</p>
+    </footer>
+
+    <script src="./script/header.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.6/autoComplete.min.js"></script>
+    <script>
+      const autoCompleteJS = new autoComplete({
+        placeHolder: "Brand",
+        data: {
+          src: ["Trek bikes", "Santa cruz", "Yeti cycles", "Pivot cycles", "Canyon", "Cannondale"],
+          cache: true,
+        },
+        resultItem: {
+          highlight: true,
+        },
+        events: {
+          input: {
+            selection: (event) => {
+              const selection = event.detail.selection.value;
+              autoCompleteJS.input.value = selection;
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

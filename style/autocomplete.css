@@ -1,0 +1,96 @@
+.search__line.active #autoComplete {
+  width: 100%;
+}
+
+#autoComplete {
+  width: 0;
+  border: none;
+}
+
+#autoComplete::placeholder {
+  transition: var(--btn-transition);
+  opacity: 0.6;
+}
+
+#autoComplete:focus::placeholder {
+  padding: 0 0 0 2px;
+}
+
+.autoComplete_wrapper {
+  display: inline-block;
+  position: relative;
+}
+.autoComplete_wrapper > input {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 18px;
+  color: var(--black);
+  outline: 0;
+  padding: 0 5px 0 0;
+  transition: all 0.4s ease;
+  -webkit-transition: all -webkit-transform 0.4s ease;
+  font-family: var(--regular);
+  position: relative;
+  left: -10px;
+}
+
+.autoComplete_wrapper > input:hover {
+  color: var(--black);
+  transition: all 0.3s ease;
+  -webkit-transition: all -webkit-transform 0.3s ease;
+}
+.autoComplete_wrapper > input:focus {
+  color: var(--black);
+}
+.autoComplete_wrapper > ul {
+  position: absolute;
+  max-height: 226px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  left: -20px;
+  top: 30px;
+  margin: 8px 0 0 0;
+  padding: 0;
+  z-index: 1;
+  list-style: none;
+  background-color: var(--white);
+  outline: 0;
+  transition: opacity 0.15s ease-in-out;
+  -moz-transition: opacity 0.15s ease-in-out;
+  -webkit-transition: opacity 0.15s ease-in-out;
+}
+.autoComplete_wrapper > ul:empty,
+.autoComplete_wrapper > ul[hidden] {
+  display: block;
+  opacity: 0;
+  transform: scale(0);
+}
+.autoComplete_wrapper > ul > li {
+  margin: 2px;
+  padding: 4px 8px;
+  text-align: left;
+  font-size: 18px;
+  color: #212121;
+  background-color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.2s ease;
+}
+.autoComplete_wrapper > ul > li mark {
+  background-color: transparent;
+  color: var(--black);
+  font-weight: 700;
+}
+
+.autoComplete_wrapper > ul > li[aria-selected="true"] {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.autoComplete_wrapper > ul > li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

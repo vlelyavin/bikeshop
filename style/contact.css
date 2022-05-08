@@ -1,0 +1,14 @@
+body {
+  background: url(../images/bg/dark.jpg) no-repeat center -25vh / cover;
+  background-attachment: fixed;
+}
+
+.contact {
+  background: var(--lightgray);
+}
+
+.contact__textarea {
+  width: 100%;
+  font-size: 22px;
+  padding: 10px;
+}

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/general.css" />
+    <link rel="stylesheet" href="../style/order.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/fonts.css" />
+    <link rel="stylesheet" href="../style/footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Bikelab</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a class="logo__img" href="../index.html"></a>
+        <div class="logo__name">Bikeshop</div>
+      </div>
+      <nav class="header__nav">
+        <a href="../index.html" class="nav__link"><span class="custombtn">Bikes</span> </a>
+        <a href="./pages/about.html" class="nav__link"><span class="custombtn">About us</span></a>
+        <a href="./pages/contact.html" class="nav__link"><span class="custombtn">Contact</span></a>
+      </nav>
+
+      <aside class="header__aside">
+        <a href="./register.html" class="user__icon">
+          <img src="../images/icons/user.png" alt="user" />
+        </a>
+      </aside>
+
+      <img class="menu__img" src="../images/icons/menu.png" />
+    </header>
+
+    <div class="sidemenu">
+      <a href="../index.html#trekbikes" class="nav__link sidebar slowscroll"><span class="custombtn">Bikes</span> </a>
+      <a href="./about.html" class="nav__link sidebar"><span class="custombtn">About us</span></a>
+      <a href="./contact.html" class="nav__link sidebar"><span class="custombtn">Contact</span></a>
+    </div>
+
+    <div class="main__title">Order</div>
+
+    <form class="order__form" id="form">
+      <div class="container">
+        <div class="order__row">
+          <div class="order__column">
+            <p class="order__header">Billing address</p>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">Full name</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="name" name="nam" minlength="4" required />
+            </div>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">Email</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="email" name="email" minlength="11" required />
+            </div>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">Address</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="address" name="address" minlength="6" required />
+            </div>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">City</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="city" name="city" minlength="2" required />
+            </div>
+            <div class="errortext"></div>
+            <div class="order__row__split">
+              <div class="order__column__split">
+                <div class="input__suptitle__container">
+                  <label class="input__suptitle">Phone number</label>
+                </div>
+                <div class="form__input__container">
+                  <input class="form__input" type="tel" id="phone" name="phone" maxlength="10" required />
+                </div>
+                <div class="errortext"></div>
+              </div>
+              <div class="order__column__split">
+                <div class="input__suptitle__container">
+                  <label class="input__suptitle">Postal code</label>
+                </div>
+                <div class="form__input__container">
+                  <input class="form__input" type="text" id="zip" name="zip" maxlength="5" required />
+                </div>
+                <div class="errortext"></div>
+              </div>
+            </div>
+            <div class="order__row__split">
+              <div class="order__column__split">
+                <div class="input__suptitle__container">
+                  <label class="input__suptitle">State</label>
+                </div>
+                <div class="form__input__container">
+                  <input class="form__input input" type="text" id="state" name="state" />
+                </div>
+                <div class="errortext"></div>
+              </div>
+
+              <div class="order__column__split">
+                <div class="input__suptitle__container">
+                  <label class="input__suptitle">Region</label>
+                </div>
+                <div class="regions__line">
+                  <div class="form__input__container">
+                    <select name="regions" class="regions" id="select" required>
+                      <option selected>Kiev city</option>
+                      <option>Kiev region</option>
+                      <option>Dnepropetrovsk</option>
+                      <option>Donetsk</option>
+                      <option>Zaporizka</option>
+                      <option>Poltavska</option>
+                      <option>Khrakiv</option>
+                      <option>Odessa</option>
+                      <option>Ivano-Frankivsk</option>
+                      <option>Kherson</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order__column">
+            <p class="order__header">Payment</p>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">Available cards</label>
+            </div>
+            <div class="icon__container">
+              <i class="fa fa-cc-visa" style="color: navy"></i>
+              <i class="fa fa-cc-mastercard" style="color: red"></i>
+            </div>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">Card name</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input input" type="text" id="cname" name="cardname" minlength="5" required />
+            </div>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">Card number</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input input" type="text" id="cnum" name="cardnumber" maxlength="19" required />
+            </div>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">Expiry month</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="expmonth" name="expmonth" minlength="4" required />
+            </div>
+            <div class="order__row__split">
+              <div class="order__column__split">
+                <div class="input__suptitle__container">
+                  <label class="input__suptitle">Expiry year</label>
+                </div>
+                <div class="form__input__container">
+                  <input class="form__input" type="text" id="expyear" name="expyear" maxlength="4" required />
+                </div>
+              </div>
+              <div class="order__column__split">
+                <div class="input__suptitle__container">
+                  <label class="input__suptitle">CVV</label>
+                </div>
+                <div class="form__input__container">
+                  <input class="form__input" type="text" id="cvv" name="cvv" maxlength="3" required />
+                </div>
+              </div>
+            </div>
+
+            <input type="checkbox" name="checkbox" class="checkbox" id="check" />
+            <label for="check" class="checklabel"> Shipping address same as billing</label>
+          </div>
+        </div>
+
+        <div class="order__row">
+          <div class="order__column">
+            <p class="order__header">Order message</p>
+            <div class="bike__choice">
+              <p class="bike__choice__header">Leave your message, choose the model of the bike and delivery date</p>
+              <div class="form__input__container">
+                <select class="select__bike" id="bike__select">
+                  <option>Trek slash 9.9 AXS</option>
+                  <option>Trek slash 8</option>
+                  <option>Trek slash 7</option>
+                  <option>Trek top fuel 9.8 XT</option>
+                  <option>Trek top fuel 8</option>
+                  <option>Trek roscoe 9</option>
+                  <option>Trek procaliber 9.7</option>
+                  <option>Trek marlin 8</option>
+                  <option>Trek marlin 6</option>
+                  <option>Santa cruz v10</option>
+                  <option>Santa cruz bronson</option>
+                  <option>Santa cruz chameleon</option>
+                  <option>Santa cruz hightower</option>
+                  <option>Santa cruz blur</option>
+                  <option>Santa cruz nomad</option>
+                  <option>Santa cruz jackal</option>
+                  <option>Yeti sb 165</option>
+                  <option>Yeti sb 150</option>
+                  <option>Yeti ARC</option>
+                  <option>Pivot phoenix 29</option>
+                  <option>Pivot mach 6</option>
+                  <option>Pivot firebird</option>
+                  <option>Pivot trail 429</option>
+                  <option>Canyon mullet CF 8 CLLCTV</option>
+                  <option>Canyon spectral 27.5 CF 7</option>
+                  <option>Cannondale scalpel</option>
+                  <option>Cannondale F-SI</option>
+                  <option>GT fury</option>
+                </select>
+              </div>
+              <div class="order__textarea__container">
+                <textarea name="textarea" id="textarea" class="textarea"></textarea>
+              </div>
+              <div class="order__date">
+                <span class="date__elem">
+                  <div class="input__suptitle__container">
+                    <label class="input__suptitle"
+                      >Day:
+                      <select name="deliveryday" id="deliveryday" required></select>
+                    </label>
+                  </div>
+                </span>
+                <span class="date__elem">
+                  <div class="input__suptitle__container">
+                    <label class="input__suptitle"
+                      >Month:
+                      <select name="deliverymonth" id="deliverymonth" required></select>
+                    </label>
+                  </div>
+                </span>
+                <span class="date__elem">
+                  <div class="input__suptitle__container">
+                    <label class="input__suptitle"
+                      >Year:
+                      <select name="deliveryyear" id="deliveryyear" required></select>
+                    </label>
+                  </div>
+                </span>
+              </div>
+              <div class="order__button__container">
+                <a href="../pages/register.html" class="nav__link submit"
+                  ><span class="custombtn">Create account</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="order__column">
+            <p class="order__header">Shipping address</p>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">Full name</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="named" name="name" required />
+            </div>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">Email</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input" type="email" id="emaild" name="email" required />
+            </div>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">Address</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input" type="text" id="addressd" name="address" required title="Введите свой адрес" />
+            </div>
+            <div class="input__suptitle__container">
+              <label class="input__suptitle">City</label>
+            </div>
+            <div class="form__input__container">
+              <input class="form__input inputanim" type="text" id="cityd" name="city" required />
+            </div>
+            <div class="order__row__split">
+              <div class="order__column__split">
+                <div class="input__suptitle__container">
+                  <label class="input__suptitle">Phone number</label>
+                </div>
+                <div class="form__input__container">
+                  <input class="form__input" type="tel" id="phoned" name="phone" required />
+                </div>
+              </div>
+              <div class="order__column__split">
+                <div class="input__suptitle__container">
+                  <label class="input__suptitle">Postal code</label>
+                </div>
+                <div class="form__input__container">
+                  <input class="form__input" type="text" id="zipd" name="zip" required />
+                </div>
+              </div>
+            </div>
+            <div class="order__row__split">
+              <div class="order__column__split">
+                <div class="input__suptitle__container">
+                  <label class="input__suptitle">State</label>
+                </div>
+                <div class="form__input__container">
+                  <input class="form__input" type="text" id="stated" name="state" />
+                </div>
+              </div>
+              <div class="order__column__split">
+                <div class="input__suptitle__container">
+                  <label class="input__suptitle">Region</label>
+                </div>
+                <div class="regions__line">
+                  <div class="form__input__container">
+                    <select name="regions" class="regions" id="selectd" required>
+                      <option selected>Kiev city</option>
+                      <option>Kiev region</option>
+                      <option>Dnepropetrovsk</option>
+                      <option>Donetsk</option>
+                      <option>Zaporizka</option>
+                      <option>Poltavska</option>
+                      <option>Khrakiv</option>
+                      <option>Odessa</option>
+                      <option>Ivano-Frankivsk</option>
+                      <option>Kherson</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit__block">
+          <button type="submit" class="nav__link submit">
+            <span class="custombtn">Send</span>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <p class="footer__text">© 2022 All rights reserved</p>
+      <p class="footer__text">Bikeshop</p>
+    </footer>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/order.js"></script>
+    <script src="../script/titleAnim.js"></script>
+  </body>
+</html>
