@@ -14,6 +14,7 @@ let state = document.getElementById("state");
 let stated = document.getElementById("stated");
 const checkbox = document.getElementById("check");
 const checkLabel = document.querySelector(".checklabel");
+
 const select = document.getElementById("select");
 const selectd = document.getElementById("selectd");
 const submitBtns = document.querySelectorAll(".submit");
@@ -29,8 +30,6 @@ const iconContainer = document.querySelector(".icon__container");
 const container = document.querySelector(".container");
 const inputSuptitles = document.querySelectorAll(".input__suptitle");
 const choiceHeader = document.querySelector(".bike__choice__header");
-const cnum = document.getElementById("cnum");
-const form = document.getElementById("form");
 
 nam.value = localStorage.getItem("name");
 email.value = localStorage.getItem("email");
@@ -39,6 +38,8 @@ city.value = localStorage.getItem("city");
 phone.value = localStorage.getItem("phone");
 state.value = localStorage.getItem("state");
 zip.value = localStorage.getItem("zip");
+
+const form = document.getElementById("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -50,6 +51,7 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem("phone", formData.get("phone"));
   localStorage.setItem("zip", formData.get("zip"));
   localStorage.setItem("state", formData.get("state"));
+
   console.log(localStorage);
   alert("Your order has been sent! You will be redirected to the main page");
   setTimeout(() => {
