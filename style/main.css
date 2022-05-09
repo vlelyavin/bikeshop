@@ -446,10 +446,6 @@ input[type="radio"] {
   .product__column {
     padding: 30px 30px 10px;
   }
-  .slider__item {
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
   .product__column {
     width: 100%;
   }
