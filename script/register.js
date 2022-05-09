@@ -61,14 +61,14 @@ formTitle.classList.add("show");
 
 setTimeout(() => {
   formLabels.forEach((label) => label.classList.add("show"));
-}, 300);
+}, 200);
 
 setTimeout(() => {
   inputs.forEach((input) => input.classList.add("show"));
   eyeOuter.forEach((eye) => eye.classList.add("show"));
   fButton.classList.add("show");
   submitBtn.classList.add("show");
-}, 600);
+}, 400);
 
 inputs.forEach((input) =>
   input.addEventListener("input", (e) => {

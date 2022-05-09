@@ -28,15 +28,15 @@ mainTitleFirst.classList.add("titlereveal");
 
 setTimeout(() => {
   mainTitleSecond.classList.add("titlereveal");
-}, 700);
+}, 500);
 
 setTimeout(() => {
   mainTitleThird.classList.add("titlereveal");
-}, 1400);
+}, 1000);
 
 setTimeout(() => {
   mainArrow.classList.add("arrow");
-}, 2000);
+}, 1500);
 
 search.addEventListener("keyup", (e) => {
   const options = {
@@ -74,11 +74,7 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        if (entry.target.classList.contains("product__column")) {
-          entry.target.classList.add("show");
-        } else if (entry.target.classList.contains("top__brands")) {
-          entry.target.classList.add("reveal");
-        }
+        entry.target.classList.add("show");
       }
     });
   },

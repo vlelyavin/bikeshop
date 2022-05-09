@@ -7,14 +7,14 @@ const container = document.querySelector(".container");
 title.classList.add("show");
 setTimeout(() => {
   text.classList.add("show");
-}, 300);
+}, 200);
 
 setTimeout(() => {
   mapLocation.classList.add("show");
-}, 600);
+}, 400);
 
 setTimeout(() => {
   map.classList.add("show");
-}, 900);
+}, 600);
 
 container.style.opacity = 1;

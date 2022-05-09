@@ -165,7 +165,7 @@ choiceHeader.classList.add("show");
 orderHeaders.forEach((header) => header.classList.add("show"));
 setTimeout(() => {
   inputSuptitles.forEach((suptitle) => suptitle.classList.add("show"));
-}, 300);
+}, 200);
 
 setTimeout(() => {
   submitBtns.forEach((button) => {

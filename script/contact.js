@@ -86,14 +86,14 @@ container.style.opacity = 1;
 greeting.classList.add("show");
 setTimeout(() => {
   descr.classList.add("show");
-}, 300);
+}, 200);
 
 setTimeout(() => {
   suptitles.forEach((suptitle) => suptitle.classList.add("show"));
-}, 600);
+}, 400);
 
 setTimeout(() => {
   inputs.forEach((input) => input.classList.add("show"));
   textarea.classList.add("show");
   submitBtn.classList.add("show");
-}, 900);
+}, 600);
