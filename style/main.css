@@ -457,9 +457,3 @@ input[type="radio"] {
     font-size: 18px;
   }
 }
-
-@media (max-width: 500px) {
-  .logo__name {
-    display: none;
-  }
-}
