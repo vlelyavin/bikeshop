@@ -6,6 +6,7 @@ body {
 .map__container {
   overflow: hidden;
   margin: 0 auto;
+  -webkit-box-shadow: var(--gray-bs);
   box-shadow: var(--gray-bs);
 }
 
@@ -15,7 +16,11 @@ body {
 }
 
 .map {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   opacity: 0;
 }

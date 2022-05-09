@@ -6,8 +6,15 @@ body {
 .register__form {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background: var(--lightgray);
 }
@@ -32,8 +39,14 @@ body {
 }
 
 .fb__placement {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 0 30px;
   overflow: hidden;
@@ -53,16 +66,25 @@ body {
   cursor: pointer;
   position: relative;
   z-index: 3;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
   transform: scale(0.8);
 }
 
 .eyeouter:hover {
+  -webkit-box-shadow: 0 0 0 1px var(--black);
   box-shadow: 0 0 0 1px var(--black);
 }
 
 .eyeouter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: absolute;
   width: 32px;
@@ -80,6 +102,8 @@ body {
   height: var(--btn12);
   top: 6px;
   left: -2px;
+  -webkit-transition: var(--btn-transition);
+  -o-transition: var(--btn-transition);
   transition: var(--btn-transition);
   background: var(--white);
 }
@@ -91,15 +115,21 @@ body {
   width: var(--btn12);
   left: 6px;
   top: -2px;
+  -webkit-transition: var(--btn-transition);
+  -o-transition: var(--btn-transition);
   transition: var(--btn-transition);
   background: var(--white);
 }
 
 .eyeouter:hover::before {
+  -webkit-transform: scaley(0);
+  -ms-transform: scaley(0);
   transform: scaley(0);
 }
 
 .eyeouter:hover::after {
+  -webkit-transform: scalex(0);
+  -ms-transform: scalex(0);
   transform: scalex(0);
 }
 

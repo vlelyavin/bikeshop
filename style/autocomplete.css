@@ -7,9 +7,51 @@
   border: none;
 }
 
-#autoComplete::placeholder {
+#autoComplete::-webkit-input-placeholder {
+  -webkit-transition: var(--btn-transition);
   transition: var(--btn-transition);
   opacity: 0.6;
+}
+
+#autoComplete::-moz-placeholder {
+  -moz-transition: var(--btn-transition);
+  transition: var(--btn-transition);
+  opacity: 0.6;
+}
+
+#autoComplete:-ms-input-placeholder {
+  -ms-transition: var(--btn-transition);
+  transition: var(--btn-transition);
+  opacity: 0.6;
+}
+
+#autoComplete::-ms-input-placeholder {
+  -ms-transition: var(--btn-transition);
+  transition: var(--btn-transition);
+  opacity: 0.6;
+}
+
+#autoComplete::placeholder {
+  -webkit-transition: var(--btn-transition);
+  -o-transition: var(--btn-transition);
+  transition: var(--btn-transition);
+  opacity: 0.6;
+}
+
+#autoComplete:focus::-webkit-input-placeholder {
+  padding: 0 0 0 2px;
+}
+
+#autoComplete:focus::-moz-placeholder {
+  padding: 0 0 0 2px;
+}
+
+#autoComplete:focus:-ms-input-placeholder {
+  padding: 0 0 0 2px;
+}
+
+#autoComplete:focus::-ms-input-placeholder {
+  padding: 0 0 0 2px;
 }
 
 #autoComplete:focus::placeholder {
@@ -31,6 +73,8 @@
   color: var(--black);
   outline: 0;
   padding: 0 5px 0 0;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   -webkit-transition: all -webkit-transform 0.4s ease;
   font-family: var(--regular);
@@ -40,6 +84,8 @@
 
 .autoComplete_wrapper > input:hover {
   color: var(--black);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-transition: all -webkit-transform 0.3s ease;
 }
@@ -50,6 +96,7 @@
   position: absolute;
   max-height: 226px;
   overflow-y: scroll;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   left: -20px;
   top: 30px;
@@ -59,6 +106,7 @@
   list-style: none;
   background-color: var(--white);
   outline: 0;
+  -o-transition: opacity 0.15s ease-in-out;
   transition: opacity 0.15s ease-in-out;
   -moz-transition: opacity 0.15s ease-in-out;
   -webkit-transition: opacity 0.15s ease-in-out;
@@ -67,6 +115,8 @@
 .autoComplete_wrapper > ul[hidden] {
   display: block;
   opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
   transform: scale(0);
 }
 .autoComplete_wrapper > ul > li {
@@ -78,7 +128,10 @@
   background-color: var(--white);
   white-space: nowrap;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .autoComplete_wrapper > ul > li mark {
