@@ -37,7 +37,6 @@ body {
 }
 
 .main__arrow {
-  --arrow-size: 90;
   position: relative;
   top: 110vh;
   -webkit-transition: top 1s;
@@ -306,7 +305,6 @@ input[type="radio"] {
 }
 
 .help__header {
-  --help-h-fz: 60;
   font-size: calc(var(--help-h-fz) * 1px);
   padding: 0 0 40px 0;
   color: var(--white);

@@ -17,7 +17,6 @@ body {
 }
 
 .main__title {
-  --title-fz: 100;
   position: relative;
   top: 5vh;
   height: 70vh;
@@ -56,7 +55,6 @@ body {
 }
 
 .form__title {
-  --form-title-fz: 60;
   font-size: calc(var(--form-title-fz) * 1px);
   letter-spacing: 1.5px;
   text-align: center;
@@ -69,7 +67,6 @@ body {
 }
 
 .form__text {
-  --form-text-fz: 22;
   font-size: calc(var(--form-text-fz) * 1px);
   line-height: 40px;
   opacity: 0;

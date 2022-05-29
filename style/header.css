@@ -14,6 +14,11 @@
 }
 
 :root {
+  --title-fz: 100;
+  --form-title-fz: 60;
+  --form-text-fz: 22;
+  --arrow-size: 90;
+  --help-h-fz: 60;
   --white: #fff;
   --lightgray: #fdfdfd;
   --black: #000;
