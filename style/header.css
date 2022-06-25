@@ -214,19 +214,13 @@
   -ms-flex-pack: start;
   justify-content: flex-start;
   position: fixed;
-  right: 0;
+  right: -340px;
   top: 96px;
   z-index: 6;
   padding: 10px 20px;
-  opacity: 0;
-  -webkit-transform: translatex(340px);
-  -ms-transform: translatex(340px);
-  transform: translatex(340px);
-  -webkit-transition: opacity var(--transition), -webkit-transform var(--transition);
-  transition: opacity var(--transition), -webkit-transform var(--transition);
-  -o-transition: transform var(--transition), opacity var(--transition);
-  transition: transform var(--transition), opacity var(--transition);
-  transition: transform var(--transition), opacity var(--transition), -webkit-transform var(--transition);
+  -webkit-transition: opacity var(--transition), right var(--transition);
+  -o-transition: opacity var(--transition), right var(--transition);
+  transition: opacity var(--transition), right var(--transition);
   background: var(--white);
   -webkit-box-shadow: var(--gray-bs);
   box-shadow: var(--gray-bs);
@@ -259,16 +253,13 @@
   -webkit-transform: translatex(100px);
   -ms-transform: translatex(100px);
   transform: translatex(100px);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
   background: transparent;
   border-radius: 50%;
-  -webkit-transition: var(--transition);
-  -o-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transition: -webkit-box-shadow var(--transition);
+  transition: -webkit-box-shadow var(--transition);
+  -o-transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), -webkit-box-shadow var(--transition);
 }
 
 .menu__img:hover {
@@ -283,10 +274,7 @@
 }
 
 .sidemenu.showmenu {
-  -webkit-transform: translatey(0);
-  -ms-transform: translatey(0);
-  transform: translatey(0);
-  opacity: 1;
+  right: 0;
 }
 
 .search__line {
@@ -377,6 +365,7 @@
   width: 0px;
   height: 50px;
   left: 20px;
+  padding: 0 8px 0 0;
   pointer-events: none;
   -webkit-transition: width 1s, left 0.3s;
   -o-transition: width 1s, left 0.3s;
@@ -399,6 +388,7 @@
   height: 15px;
   right: 12px;
   opacity: 0;
+
   z-index: 2;
   background: var(--white);
   -webkit-transition: opacity 0.5s, -webkit-transform 0.8s;

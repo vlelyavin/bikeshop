@@ -441,13 +441,4 @@ input[type="radio"] {
     width: calc((var(--arrow-size) - 40) * 1px);
     height: calc((var(--arrow-size) - 40) * 1px);
   }
-  .product__column {
-    padding: 30px 30px 10px;
-  }
-  .product__column {
-    width: 100%;
-  }
-  .product {
-    font-size: 18px;
-  }
 }
