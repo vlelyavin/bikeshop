@@ -10,6 +10,10 @@ body {
   background: var(--lightgray);
 }
 
+.main__intro {
+  height: 200vh;
+}
+
 .main__intro__inner {
   position: fixed;
   display: -webkit-box;
@@ -113,8 +117,9 @@ input[type="radio"] {
 .slider__image {
   -o-object-fit: cover;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 130%;
+  height: 130%;
+  transition: 2s cubic-bezier(0.09, 1, 0.63, 1);
 }
 
 .first {

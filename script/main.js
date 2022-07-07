@@ -83,19 +83,20 @@ cards.forEach((card) => {
   observer.observe(card);
 });
 
-intro.style.height = `200vh`;
-
 document.addEventListener("scroll", () => {
   const windowScrollY = window.pageYOffset;
   const windowHeight = window.innerHeight;
-
   container.style.transform = `translatey(-${windowScrollY}px)`;
 
-  if (windowScrollY <= windowHeight) {
-    const size = 175 - windowScrollY / 20;
+  if (windowScrollY > window.innerHeight / 2) {
     sliderImages.forEach((image) => {
-      image.style.width = `${size}%`;
-      image.style.height = `${size}%`;
+      image.style.width = `100%`;
+      image.style.height = `100%`;
+    });
+  } else {
+    sliderImages.forEach((image) => {
+      image.style.width = `130%`;
+      image.style.height = `130%`;
     });
   }
 
@@ -104,7 +105,7 @@ document.addEventListener("scroll", () => {
     sliderNav.style.bottom = `50px`;
   }
 
-  if (windowScrollY - windowHeight <= 50) {
+  if (windowScrollY - windowHeight <= 100) {
     slider.style.transition = `0.05s`;
     slider.style.transform = `translatey(0)`;
   } else {
