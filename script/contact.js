@@ -1,5 +1,4 @@
 const form = document.getElementById("form");
-const greeting = document.querySelector(".form__title");
 const descr = document.querySelector(".form__text");
 const inputs = document.querySelectorAll("input");
 const container = document.querySelector(".container");
@@ -83,7 +82,6 @@ textarea.addEventListener("input", (e) => {
 
 container.style.opacity = 1;
 
-greeting.classList.add("show");
 setTimeout(() => {
   descr.classList.add("show");
 }, 200);

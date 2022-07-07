@@ -16,9 +16,7 @@ body {
   transition: opacity 2s ease;
 }
 
-.main__title {
-  position: relative;
-  top: 5vh;
+.page__title__container {
   height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,6 +32,40 @@ body {
   text-transform: uppercase;
   letter-spacing: 5px;
   color: var(--white);
+}
+.page__title {
+  position: relative;
+  top: 5vh;
+  -webkit-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  transform: translateY(50px);
+  opacity: 0;
+  -webkit-animation: titleAnim 2s cubic-bezier(0, 0.93, 0.45, 0.99) forwards;
+  animation: titleAnim 2s cubic-bezier(0, 0.93, 0.45, 0.99) forwards;
+}
+
+@-webkit-keyframes titleAnim {
+  from {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes titleAnim {
+  from {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .form__inner {

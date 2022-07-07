@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +57,11 @@
   background: var(--white);
   -webkit-box-shadow: var(--gray-bs);
   box-shadow: var(--gray-bs);
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 .header__logo {
@@ -447,6 +459,18 @@
 .reveal {
   -webkit-animation: translate 0.4s forwards;
   animation: translate 0.4s forwards;
+}
+
+.drop {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.hide {
+  -webkit-transform: translateY(-110%);
+  -ms-transform: translateY(-110%);
+  transform: translateY(-110%);
 }
 
 @-webkit-keyframes translate {

@@ -22,5 +22,11 @@ window.addEventListener("wheel", (e) => {
   if (e.deltaY > 0 && sidemenu.classList.contains("showmenu")) {
     sidemenu.classList.remove("showmenu");
     menu.classList.remove("flip");
-  } else;
+  } else if (e.deltaY > 0) {
+    header.classList.remove("drop");
+    header.classList.add("hide");
+  } else {
+    header.classList.remove("hide");
+    header.classList.add("drop");
+  }
 });

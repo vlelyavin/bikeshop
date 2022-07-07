@@ -16,14 +16,6 @@ const sliderNav = document.querySelector(".slider__nav");
 const sliderNavButtons = document.querySelectorAll(".slider__nav__button");
 const mainArrow = document.querySelector(".main__arrow");
 
-if (window.innerHeight > 1440) {
-  intro.style.height = `${window.innerHeight * 3.5}px`;
-} else if (window.innerHeight <= 1440 && window.innerHeight > 1000) {
-  intro.style.height = `${window.innerHeight * 3.7}px`;
-} else {
-  intro.style.height = `${window.innerHeight * 4.8}px`;
-}
-
 mainTitleFirst.classList.add("titlereveal");
 
 setTimeout(() => {
@@ -91,12 +83,15 @@ cards.forEach((card) => {
   observer.observe(card);
 });
 
+intro.style.height = `200vh`;
+
 document.addEventListener("scroll", () => {
   const windowScrollY = window.pageYOffset;
+  const windowHeight = window.innerHeight;
 
-  container.style.transform = `translatey(-${windowScrollY / 2}px)`;
+  container.style.transform = `translatey(-${windowScrollY}px)`;
 
-  if (windowScrollY <= 1500) {
+  if (windowScrollY <= windowHeight) {
     const size = 175 - windowScrollY / 20;
     sliderImages.forEach((image) => {
       image.style.width = `${size}%`;
@@ -104,20 +99,20 @@ document.addEventListener("scroll", () => {
     });
   }
 
-  sliderNav.style.bottom = `${windowScrollY / 10 - 100}px`;
+  sliderNav.style.bottom = `${windowScrollY / 10}px`;
   if (sliderNav.style.bottom.slice(0, -2) > 50) {
     sliderNav.style.bottom = `50px`;
   }
 
-  if ((windowScrollY - 1500) / 1.5 <= 100) {
-    slider.style.transition = `0.1s`;
+  if (windowScrollY - windowHeight <= 50) {
+    slider.style.transition = `0.05s`;
     slider.style.transform = `translatey(0)`;
   } else {
     slider.style.transition = ``;
   }
 
-  if (windowScrollY > 1500) {
-    slider.style.transform = `translatey(-${(windowScrollY - 2000) / 2}px)`;
+  if (windowScrollY > windowHeight) {
+    slider.style.transform = `translatey(-${windowScrollY - windowHeight}px)`;
   }
 });
 
