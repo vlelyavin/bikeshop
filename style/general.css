@@ -161,8 +161,7 @@ body {
 }
 
 .check__password {
-  position: relative;
-  margin: 10px 0 -25px;
+  margin: 12px 0 -14px;
 }
 
 .valid {
