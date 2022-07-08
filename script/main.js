@@ -86,7 +86,11 @@ cards.forEach((card) => {
 document.addEventListener("scroll", () => {
   const windowScrollY = window.pageYOffset;
   const windowHeight = window.innerHeight;
-  container.style.transform = `translatey(-${windowScrollY}px)`;
+  if (windowScrollY < windowHeight * 2) {
+    container.style.transform = `translatey(-${windowScrollY}px)`;
+  } else {
+    container.style.transform = `translatey(-${windowHeight * 2}px)`;
+  }
 
   if (windowScrollY > window.innerHeight / 2) {
     sliderImages.forEach((image) => {
@@ -101,6 +105,7 @@ document.addEventListener("scroll", () => {
   }
 
   sliderNav.style.bottom = `${windowScrollY / 10}px`;
+
   if (sliderNav.style.bottom.slice(0, -2) > 50) {
     sliderNav.style.bottom = `50px`;
   }
