@@ -38,7 +38,7 @@ body {
   position: relative;
   top: 12vh;
   opacity: 0;
-  transition: top 1s cubic-bezier(0, 0.93, 0.45, 0.99), opacity 0.5s ease;
+  transition: top 1s cubic-bezier(0, 0.93, 0.45, 0.99), opacity 0.3s ease;
 }
 
 @-webkit-keyframes titleAnim {
