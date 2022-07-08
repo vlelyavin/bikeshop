@@ -33,15 +33,12 @@ body {
   letter-spacing: 5px;
   color: var(--white);
 }
+
 .page__title {
   position: relative;
-  top: 5vh;
-  -webkit-transform: translateY(50px);
-  -ms-transform: translateY(50px);
-  transform: translateY(50px);
+  top: 12vh;
   opacity: 0;
-  -webkit-animation: titleAnim 2s cubic-bezier(0, 0.93, 0.45, 0.99) forwards;
-  animation: titleAnim 2s cubic-bezier(0, 0.93, 0.45, 0.99) forwards;
+  transition: top 1s cubic-bezier(0, 0.93, 0.45, 0.99), opacity 0.5s ease;
 }
 
 @-webkit-keyframes titleAnim {
