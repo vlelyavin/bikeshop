@@ -9,7 +9,7 @@ body {
   max-width: 700px;
   width: 100%;
   margin: 0 auto;
-  padding: 100px 30px 0;
+  padding: 50px 30px 0;
   opacity: 0;
   -webkit-transition: opacity 2s ease;
   -o-transition: opacity 2s ease;
@@ -39,6 +39,7 @@ body {
   top: 12vh;
   opacity: 0;
   transition: top 1s cubic-bezier(0, 0.93, 0.45, 0.99), opacity 0.3s ease;
+  font-size: 7vw;
 }
 
 @-webkit-keyframes titleAnim {
@@ -84,7 +85,7 @@ body {
 }
 
 .form__title {
-  font-size: calc(var(--form-title-fz) * 1px);
+  font-size: 3.5vw;
   letter-spacing: 1.5px;
   text-align: center;
   font-family: var(--medium);
@@ -96,8 +97,7 @@ body {
 }
 
 .form__text {
-  font-size: calc(var(--form-text-fz) * 1px);
-  line-height: 40px;
+  font-size: 2vw;
   opacity: 0;
   text-align: center;
 }
@@ -128,7 +128,7 @@ body {
 .form__input__label {
   opacity: 0;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 
 .form__button__container {
@@ -144,6 +144,7 @@ body {
   background: var(--white);
   opacity: 0;
   width: 100%;
+  font-size: 1.5vw;
 }
 
 .submit:hover {
@@ -196,34 +197,42 @@ textarea:focus {
 
 @media (max-width: 1200px) {
   .form__title {
-    font-size: calc((var(--form-title-fz) - 5) * 1px);
+    font-size: 5vw;
     white-space: nowrap;
   }
-  .form__text {
-    font-size: calc((var(--form-text-fz) - 2) * 1px);
-    line-height: 36px;
+
+  .page__title {
+    font-size: 8vw;
+  }
+  .form__input__label {
+    font-size: 2vw;
+  }
+  .submit {
+    font-size: 2vw !important;
   }
 }
 
 @media (max-width: 800px) {
-  .main__title {
-    font-size: calc((var(--title-fz) - 20) * 1px);
-  }
   .form__title {
-    font-size: calc((var(--form-title-fz) - 10) * 1px);
+    font-size: 6vw;
     white-space: nowrap;
   }
   .form__text {
-    font-size: calc((var(--form-text-fz) - 4) * 1px);
-    line-height: 32px;
+    font-size: 3vw;
+  }
+  .page__title {
+    font-size: 10vw;
   }
   .form__input__label {
-    font-size: var(--font-size);
+    font-size: 3vw;
+  }
+  .submit {
+    font-size: 3vw !important;
   }
 }
 
+@media (max-width: 800px) {
+}
+
 @media (max-width: 500px) {
-  .main__title {
-    font-size: calc((var(--title-fz) - 35) * 1px);
-  }
 }

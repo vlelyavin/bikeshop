@@ -11,8 +11,6 @@
     <title>Bikelab</title>
   </head>
   <body>
-    <div id="fb-root"></div>
-
     <header class="header">
       <div class="header__logo">
         <a class="logo__img" href="../index.html"></a>
@@ -122,22 +120,6 @@
             <span class="custombtn">Register</span>
           </button>
         </div>
-        <p class="form__submit__status">Registered successfully, redirecting to the main page...</p>
-        <div class="fb__placement">
-          <fb:login-button
-            class="fb-login-button"
-            data-width="280"
-            data-size="large"
-            data-onlogin="loginStatus()"
-            data-button-type="login_with"
-            data-layout="rounded"
-            data-auto-logout-link="true"
-            data-use-continue-as="false"
-            scope="public_profile,email"
-            onlogin="checkLoginState();"
-          >
-          </fb:login-button>
-        </div>
       </div>
     </form>
 
@@ -149,13 +131,5 @@
     <script src="../script/header.js"></script>
     <script src="../script/register.js"></script>
     <script src="../script/titleAnim.js"></script>
-    <script src="../script/facebook.js"></script>
-    <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v12.0&appId=725605504985921&autoLogAppEvents=1"
-      nonce="D7xSAERL"
-    ></script>
   </body>
 </html>

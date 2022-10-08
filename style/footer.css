@@ -18,4 +18,17 @@
   font-size: var(--font-size);
   padding: 0 30px;
   text-transform: capitalize;
+  font-size: 1.5vw;
+}
+
+@media (max-width: 1200px) {
+  .footer__text {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer__text {
+    font-size: 3vw;
+  }
 }

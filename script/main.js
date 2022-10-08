@@ -9,8 +9,8 @@ const searchLine = document.querySelector(".search__line");
 const slowScroll = document.querySelector(".slowscroll");
 const topbrands = document.querySelectorAll(".top__brands");
 const cards = document.querySelectorAll(".product__column");
-const container = document.querySelector(".main__intro__inner");
 const slider = document.querySelector(".slider");
+const sliderContainer = document.querySelector(".slider__container");
 const sliderImages = document.querySelectorAll(".slider__image");
 const sliderNav = document.querySelector(".slider__nav");
 const sliderNavButtons = document.querySelectorAll(".slider__nav__button");
@@ -83,43 +83,64 @@ cards.forEach((card) => {
   observer.observe(card);
 });
 
-document.addEventListener("scroll", () => {
-  const windowScrollY = window.pageYOffset;
-  const windowHeight = window.innerHeight;
-  if (windowScrollY < windowHeight * 2) {
-    container.style.transform = `translatey(-${windowScrollY}px)`;
-  } else {
-    container.style.transform = `translatey(-${windowHeight * 2}px)`;
-  }
+// document.addEventListener("scroll", () => {
+//   const windowScrollY = window.pageYOffset;
+//   const windowHeight = window.innerHeight;
+//   if (windowScrollY < windowHeight * 2) {
+//     container.style.transform = `translatey(-${windowScrollY}px)`;
+//   } else {
+//     container.style.transform = `translatey(-${windowHeight * 2}px)`;
+//   }
 
-  if (windowScrollY > window.innerHeight / 2) {
-    sliderImages.forEach((image) => {
-      image.style.width = `100%`;
-      image.style.height = `100%`;
-    });
-  } else {
-    sliderImages.forEach((image) => {
-      image.style.width = `130%`;
-      image.style.height = `130%`;
-    });
-  }
+//   if (windowScrollY > window.innerHeight / 2) {
+//     sliderImages.forEach((image) => {
+//       image.style.width = `100%`;
+//       image.style.height = `100%`;
+//     });
+//   } else {
+//     sliderImages.forEach((image) => {
+//       image.style.width = `130%`;
+//       image.style.height = `130%`;
+//     });
+//   }
 
-  sliderNav.style.bottom = `${windowScrollY / 10}px`;
+//   sliderNav.style.bottom = `${windowScrollY / 10}px`;
 
-  if (sliderNav.style.bottom.slice(0, -2) > 50) {
-    sliderNav.style.bottom = `50px`;
-  }
+//   if (sliderNav.style.bottom.slice(0, -2) > 50) {
+//     sliderNav.style.bottom = `50px`;
+//   }
 
-  if (windowScrollY - windowHeight <= 100) {
-    slider.style.transition = `0.05s`;
-    slider.style.transform = `translatey(0)`;
-  } else {
-    slider.style.transition = ``;
-  }
+//   if (windowScrollY - windowHeight <= 100) {
+//     slider.style.transition = `0.05s`;
+//     slider.style.transform = `translatey(0)`;
+//   } else {
+//     slider.style.transition = ``;
+//   }
 
-  if (windowScrollY > windowHeight) {
-    slider.style.transform = `translatey(-${windowScrollY - windowHeight}px)`;
-  }
+//   if (windowScrollY > windowHeight) {
+//     slider.style.transform = `translatey(-${windowScrollY - windowHeight}px)`;
+//   }
+// });
+
+// const mainObserver = new IntersectionObserver((entries) =>
+//   entries.forEach(
+//     (entry) => {
+//       if (entry.isIntersecting) {
+//         console.log(entry.target);
+//       } else {
+//         console.log("not intersecting");
+//       }
+//     },
+//     { threshold: 0.5 }
+//   )
+// );
+
+// sliderImages.forEach((image) => {
+//   mainObserver.observe(image);
+// });
+
+window.addEventListener("scroll", (e) => {
+  intro.style.transform = `translateY(${window.scrollY / 2}px) translateX(${window.scrollY / 5}px)`;
 });
 
 sliderNavButtons.forEach((button) =>

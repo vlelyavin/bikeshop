@@ -66,7 +66,6 @@ setTimeout(() => {
 setTimeout(() => {
   inputs.forEach((input) => input.classList.add("show"));
   eyeOuter.forEach((eye) => eye.classList.add("show"));
-  fButton.classList.add("show");
   submitBtn.classList.add("show");
 }, 400);
 

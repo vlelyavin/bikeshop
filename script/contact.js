@@ -25,7 +25,7 @@ form.addEventListener("submit", (e) => {
     setTimeout(() => {
       window.location = "../index.html";
     }, 2000);
-  } else alert("Проверьте свои данные");
+  } else alert("Check your data");
 });
 
 inputs.forEach((input) =>
