@@ -1,5 +1,4 @@
 const form = document.getElementById("form");
-
 const username = document.getElementById("name");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
@@ -9,7 +8,6 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(form);
   const submitMsg = document.querySelector(".form__submit__status");
-
   if (
     username.classList.contains("valid") &&
     email.classList.contains("valid") &&
@@ -21,7 +19,6 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("password", formData.get("password"));
     localStorage.setItem("password__rep", formData.get("password__rep"));
     submitMsg.style.display = "flex";
-
     setTimeout(() => {
       window.location = "../index.html";
     }, 2000);
@@ -48,7 +45,6 @@ showPasswordRepeat.addEventListener("click", () => {
 });
 
 const formTitle = document.querySelector(".form__title");
-const fButton = document.querySelector(".fb-login-button");
 const eyeOuter = document.querySelectorAll(".eyeouter");
 const formLabels = document.querySelectorAll(".form__input__label");
 const inputs = document.querySelectorAll(".form__input");
@@ -73,7 +69,6 @@ inputs.forEach((input) =>
   input.addEventListener("input", (e) => {
     const target = e.target;
     const checkPass = document.querySelector(".check__password");
-
     if (
       target.name === "email" &&
       target.value.includes("@") &&

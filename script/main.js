@@ -1,7 +1,6 @@
 const mainTitleFirst = document.querySelector(".main__title__first");
 const mainTitleSecond = document.querySelector(".main__title__second");
 const mainTitleThird = document.querySelector(".main__title__third");
-const introContainer = document.querySelector(".main__intro__inner");
 const intro = document.querySelector(".main__intro");
 const search = document.getElementById("autoComplete");
 const searchIcon = document.querySelector(".search__icon");
@@ -10,8 +9,6 @@ const slowScroll = document.querySelector(".slowscroll");
 const topbrands = document.querySelectorAll(".top__brands");
 const cards = document.querySelectorAll(".product__column");
 const slider = document.querySelector(".slider");
-const sliderContainer = document.querySelector(".slider__container");
-const sliderImages = document.querySelectorAll(".slider__image");
 const sliderNav = document.querySelector(".slider__nav");
 const sliderNavButtons = document.querySelectorAll(".slider__nav__button");
 const mainArrow = document.querySelector(".main__arrow");
@@ -30,14 +27,13 @@ setTimeout(() => {
   mainArrow.classList.add("arrow");
 }, 1500);
 
+const options = {
+  block: "center",
+  behavior: "smooth",
+};
+
 search.addEventListener("keyup", (e) => {
-  const options = {
-    block: "center",
-    behavior: "smooth",
-  };
-
   const searchValue = search.value.toLowerCase().split(" ").join("");
-
   if (e.code === "Enter") {
     document.getElementById(`${searchValue}`).scrollIntoView(options);
   }
@@ -55,11 +51,7 @@ clear.addEventListener("click", () => {
 slowScroll.addEventListener("click", (e) => {
   e.preventDefault();
   const bikes = document.getElementById("trekbikes");
-
-  bikes.scrollIntoView({
-    behavior: "smooth",
-    block: "center",
-  });
+  bikes.scrollIntoView(options);
 });
 
 const observer = new IntersectionObserver(
@@ -75,77 +67,36 @@ const observer = new IntersectionObserver(
   }
 );
 
-topbrands.forEach((topbrand) => {
-  observer.observe(topbrand);
-});
-
-cards.forEach((card) => {
-  observer.observe(card);
-});
-
-// document.addEventListener("scroll", () => {
-//   const windowScrollY = window.pageYOffset;
-//   const windowHeight = window.innerHeight;
-//   if (windowScrollY < windowHeight * 2) {
-//     container.style.transform = `translatey(-${windowScrollY}px)`;
-//   } else {
-//     container.style.transform = `translatey(-${windowHeight * 2}px)`;
-//   }
-
-//   if (windowScrollY > window.innerHeight / 2) {
-//     sliderImages.forEach((image) => {
-//       image.style.width = `100%`;
-//       image.style.height = `100%`;
-//     });
-//   } else {
-//     sliderImages.forEach((image) => {
-//       image.style.width = `130%`;
-//       image.style.height = `130%`;
-//     });
-//   }
-
-//   sliderNav.style.bottom = `${windowScrollY / 10}px`;
-
-//   if (sliderNav.style.bottom.slice(0, -2) > 50) {
-//     sliderNav.style.bottom = `50px`;
-//   }
-
-//   if (windowScrollY - windowHeight <= 100) {
-//     slider.style.transition = `0.05s`;
-//     slider.style.transform = `translatey(0)`;
-//   } else {
-//     slider.style.transition = ``;
-//   }
-
-//   if (windowScrollY > windowHeight) {
-//     slider.style.transform = `translatey(-${windowScrollY - windowHeight}px)`;
-//   }
-// });
-
-// const mainObserver = new IntersectionObserver((entries) =>
-//   entries.forEach(
-//     (entry) => {
-//       if (entry.isIntersecting) {
-//         console.log(entry.target);
-//       } else {
-//         console.log("not intersecting");
-//       }
-//     },
-//     { threshold: 0.5 }
-//   )
-// );
-
-// sliderImages.forEach((image) => {
-//   mainObserver.observe(image);
-// });
-
-window.addEventListener("scroll", (e) => {
+const transformIntro = () => {
   intro.style.transform = `translateY(${window.scrollY / 2}px) translateX(${window.scrollY / 5}px)`;
-});
+};
+
+window.addEventListener("scroll", transformIntro);
 
 sliderNavButtons.forEach((button) =>
   button.addEventListener("click", (e) => {
     sliderNavButtons.forEach((button) => (button.style.background = "transparent"));
-    e.target.style.background = "#fff";
+    e.target.style.background = "var(--white)";
   })
 );
+
+const resizeObserver = new ResizeObserver((entries) =>
+  entries.forEach((entry) => {
+    if (entry.contentRect.width < 1000) {
+      window.removeEventListener("scroll", transformIntro);
+      topbrands.forEach((topbrand) => observer.unobserve(topbrand));
+      cards.forEach((card) => observer.unobserve(card));
+    } else if (entry.contentRect.width < 1000) {
+      menu.classList.remove("flip");
+      sidemenu.classList.remove("showmenu");
+    } else {
+      window.addEventListener("scroll", transformIntro);
+      topbrands.forEach((topbrand) => observer.observe(topbrand));
+      cards.forEach((card) => observer.observe(card));
+      topbrands.forEach((topbrand) => (topbrand.style.opacity = 0));
+      cards.forEach((card) => (card.style.opacity = 0));
+    }
+  })
+);
+
+resizeObserver.observe(document.body);

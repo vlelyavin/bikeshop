@@ -14,7 +14,6 @@ let state = document.getElementById("state");
 let stated = document.getElementById("stated");
 const checkbox = document.getElementById("check");
 const checkLabel = document.querySelector(".checklabel");
-
 const select = document.getElementById("select");
 const selectd = document.getElementById("selectd");
 const submitBtns = document.querySelectorAll(".submit");

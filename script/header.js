@@ -11,13 +11,6 @@ menu.addEventListener("click", () => {
   sidemenu.classList.toggle("showmenu");
 });
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 1200) {
-    menu.classList.remove("flip");
-    sidemenu.classList.remove("showmenu");
-  }
-});
-
 window.addEventListener("wheel", (e) => {
   if (e.deltaY > 0 && sidemenu.classList.contains("showmenu")) {
     sidemenu.classList.remove("showmenu");

@@ -89,6 +89,9 @@ input[type="radio"] {
   -o-transition: background 0.5s;
   transition: background 0.5s;
 }
+.slider__nav__button:first-child {
+  background: var(--white);
+}
 
 .slider__container {
   width: 400%;
@@ -114,9 +117,6 @@ input[type="radio"] {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  /* width: 130%;
-  height: 130%;
-  transition: 2s cubic-bezier(0.09, 1, 0.63, 1); */
 }
 
 .first {
@@ -182,7 +182,6 @@ input[type="radio"] {
   font-size: 4vw;
   font-family: var(--light);
   letter-spacing: 4px;
-  opacity: 0;
 }
 
 .product__row {
@@ -211,7 +210,6 @@ input[type="radio"] {
   width: 30vw;
   padding: 30px 40px 10px;
   background: var(--white);
-  opacity: 0;
   -webkit-transition: var(--btn-transition);
   -o-transition: var(--btn-transition);
   transition: var(--btn-transition);
